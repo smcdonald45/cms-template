@@ -1,15 +1,949 @@
 {{ partial "head" . }}
+<link rel="stylesheet" href="http://www.rewe.de/docroot/_release/css/4890a__rewe-de.css">
+
 {{ partial "nav" . }}
-  <div class="mw6 center ph3 pv4">
-    <h1 class="f2 lh-title b mt0 mb3">{{.Title}}</h1>
-    <div class="flex justify-between grey-3">
-      <p class="mt0">{{ .Date.Format "Mon, Jan 2, 2006" }}</p>
-      <p class="mt0">Read in {{ .ReadingTime }} minutes</p>
+
+<div class="rdkv2">
+    <div class="rdk-header recipe-detail-header has-gradient">
+        <picture class="picture cover hidden-print">
+            <source media="(min-width: 768px)"
+                    data-srcset="https://clever-hoover-538d35.netlify.com/{{ .Params.image }}"
+                    srcset="https://clever-hoover-538d35.netlify.com/{{ .Params.image }}">
+            <img src="https://clever-hoover-538d35.netlify.com/{{ .Params.image }}"
+                 data-srcset="ttps://clever-hoover-538d35.netlify.com/{{ .Params.image }}"
+                 srcset="ttps://clever-hoover-538d35.netlify.com/{{ .Params.image }}">
+        </picture>
+
+        <div class="rdk-logo-wrapper visible-print-block">
+            <img class="rdk-logo "
+                 src="/docroot/_release/_pages/master/assets/img/r-e-w-e-deine-kueche-kochtopf-print.svg" alt="">
+        </div>
+
+        <div class="recipe-title-container">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-xs-12 col-sm-10 col-lg-5 col-print-10">
+                        <h1 class="h1 font-style-display-04 font-style-bright headline margin-bottom-"
+                            id="jcr-4a8b98f6-94ff-426c-8230-fb23052245ad">
+                            {{.Title}}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="breadcrumb-container hidden-print">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-9 visible-md-block visible-lg-block">
+
+                        <section class="breadcrumb all-white ">
+                            <a class="breadcrumb-link" href="/">REWE.de</a>
+                            <a class="breadcrumb-link" href="/rezepte/">Rezepte</a>
+                            <span class="breadcrumb-link active">Cannelloni mit Hackfleisch</span>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="controller hidden-md hidden-lg hidden-xl" data-controller="master/modules/RecipeCard"
+                 data-recipe-title="Cannelloni mit Hackfleisch" data-recipe-amount="4"
+                 data-uuid="0e66ce1f-06d3-450c-aa06-e7ba201089ec" data-confirm-favor="false">
+                <div class="rdk-recipe-favor">
+
+                    <div class="favor-label-wrapper" data-favor="">
+                        <svg class="favor-ribbon">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-ribbon"></use>
+                        </svg>
+
+                        <svg class="favor-state favored">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-favored"></use>
+                        </svg>
+
+                        <svg class="favor-state unfavored ">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 xlink:href="#inline-icon-rdk-unfavored"></use>
+                        </svg>
+                    </div>
+                    <div class="arrow-box position-right ">
+                        In <a href="https://www.rewe.de/meine-rezepte/" data-favorites-link="">Meine Rezepte</a>
+                        gespeichert
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="cms mw6">
-      <p class="mt0">{{ .Description }}</p>
-      {{ if .Params.image }}<img src="{{ .Params.image }}" alt="{{ .Title }}" />{{ end }}
-      {{ .Content }}
+
+    <div class="recipe-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-lg-7 item-wrapper d-flex justify-content-between flex-nowrap align-items-center recipe-info-summary">
+                    <div class="info-item info-item-time d-flex flex-column flex-wrap text-left">
+                        <div class="font-style-body-2 font-weight-bold info-item-label w-100-p">Gesamt: 65 min</div>
+                        <div class="font-style-body info-item-label w-100-p">Zubereitung: 40 min</div>
+                    </div>
+
+                    <div class="info-item d-flex hidden-print">
+                        <div class="info-icons d-inline-block">
+                            <span class="svg-filled">
+                                <svg class=" rating-icon d-inline-block">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="#inline-icon-spoon-rdkv2"></use>
+                                </svg>
+                            </span>
+
+                            <span class="">
+                            <svg class="rating-icon d-inline-block">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     xlink:href="#inline-icon-spoon-rdkv2"></use>
+                            </svg>
+                        </span>
+
+                            <span class="">
+                            <svg class="rating-icon d-inline-block">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     xlink:href="#inline-icon-spoon-rdkv2"></use>
+                            </svg>
+                        </span>
+
+                        </div>
+                        <span class="font-style-body info-item-label">Einfach</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+
+    <section class="recipe-details-v2 ">
+        <div class="container ">
+            <div class="row recipe-row">
+                <div class="col-xs-12 col-md-6  col-lg-7 col-print-8 step-container ">
+                    <div class="read-mode-header">
+                        <div class="reader-btn left">
+                            <a href="#" data-read-close="#recipe">
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="#inline-icon-carrot-left"></use>
+                                </svg>
+                                <p>Zurück <span class="hidden-xs hidden-sm">zum Rezept</span></p>
+                            </a>
+                        </div>
+                        <div class="reader-btn right">
+                            <a href="#" data-read-close="#recipe">
+                                <span class="hidden-xs hidden-sm">Vollbildansicht schließen </span>
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="#inline-icon-close"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="titel">
+                            <h2 class="h2 font-style-subhead-2 margin-bottom-0"
+                                id="jcr-4a8b98f6-94ff-426c-8230-fb23052245ad">
+                                Cannelloni mit Hackfleisch
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="visible-md-block visible-lg-block controller read-mode-layer print-force-visible"
+                         data-read-mode-container="#recipe" data-recipe-title="Cannelloni mit Hackfleisch"
+                         data-recipe-amount="4" data-controller="master/modules/ReadMode">
+
+
+                        <div class="recipe-steps read-mode-show">
+
+
+                            <h2 class="h2 hidden-xs hidden-sm font-style-headline read-mode-hidden"
+                                id="jcr-4a8b98f6-94ff-426c-8230-fb23052245ad">
+                                Zubereitung
+
+                                <div class="pull-right hidden-print">
+                                    <div class="print-button controller"
+                                         data-controller="master/fragments/RecipePrintButton"
+                                         data-recipe-title="Cannelloni mit Hackfleisch" data-recipe-amount="4">
+                                        <div class="print-label ">
+                                            <svg>
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="#inline-icon-print"></use>
+                                            </svg>
+                                            <span class="font-style-body "><span class="hidden-md">Rezept </span>ausdrucken</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pull-right hidden-print">
+
+            <span class="controller hidden-xs hidden-sm favor-wrapper" data-controller="master/modules/RecipeCard"
+                  data-uuid="0e66ce1f-06d3-450c-aa06-e7ba201089ec" data-recipe-title="Cannelloni mit Hackfleisch"
+                  data-recipe-amount="4" data-recipe-update-amount="true" data-confirm-favor="false">
+                <span class="rdk-recipe-favor text-variant">
+
+    <div data-favor="">
+        <svg class="favor-state favored" data-favor="">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-favored"></use>
+        </svg>
+        <svg class="favor-state unfavored" data-favor="">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-unfavored"></use>
+        </svg>
+
+        <span class="favored-text font-style-body "><span class="hidden-md">Rezept </span>gespeichert</span>
+        <span class="unfavored-text font-style-body "><span class="hidden-md">Rezept </span>speichern</span>
+    </div>
+
+    <div class="arrow-box position-down ">
+        In <a href="https://www.rewe.de/meine-rezepte/" data-favorites-link="">Meine Rezepte</a> gespeichert
+    </div>
+</span>
+            </span>
+                                </div>
+                            </h2>
+                            <hr class="hidden-xs hidden-sm read-mode-hidden">
+
+                            <ol class="recipe-preparation">
+                                {{ range .Params.steps }}
+                                <li class=" recipe-step avoid-pbi">
+                                    <div class="text font-style-body">
+                                        <p>{{ .description }}</p>
+                                    </div>
+                                </li>
+                                {{ end }}
+                            </ol>
+                        </div>
+
+                        <div class="expert-tipp read-mode-show hidden-print controller "
+                             data-controller="master/modules/ExpertTooltip">
+                            <div class="row">
+                                <div class="expert col-xs-12 col-sm-3 col-print-3">
+
+
+                                    <div class="image">
+                                        <img src="/docroot/_release/_pages/master/assets/img/ernaehrungsexpertin_120x120.jpg"
+                                             alt="Sophie">
+                                    </div>
+
+
+                                    <span class="expert-name font-style-body">
+                Sophie
+            </span>
+
+                                </div>
+
+                                <q class="quote col-xs-12 col-sm-8 col-print-8 font-style-body-2">
+                                    <p>Auf Nummer sicher gehen Sie, wenn Sie den Auflauf zunächst 15-20 Minuten mit
+                                        Alufolie in den Backofen stellen und ihn erst am Ende offen braun werden
+                                        lassen.</p>
+
+
+                                </q>
+                            </div>
+                        </div>
+
+
+                        <div class="read-mode-show greetings font-style-body-2">
+                            <p class="text">Viel Spaß beim Nachkochen!</p>
+                        </div>
+
+
+                    </div>
+                    <div>
+
+
+                        <div class="recipe-tags margin-bottom-3 hidden-print ">
+
+                            <h2 class="h2 margin-bottom-0 font-style-headline"
+                                id="jcr-4a8b98f6-94ff-426c-8230-fb23052245ad">
+                                Schlagwörter
+                            </h2>
+
+                            <hr class="margin-bottom-half">
+
+                            <ul class="list-unstyled tags-list clearfix">
+
+                                <li class="tag-item">
+
+                                    <a href="https://www.rewe.de/rezepte/Nudeln-Pasta/">Nudeln/Pasta</a>
+                                </li>
+
+                                <li class="tag-item">
+
+                                    <a href="https://www.rewe.de/rezepte/Fleisch/">Fleisch</a>
+                                </li>
+
+                                <li class="tag-item">
+
+                                    <a href="https://www.rewe.de/rezepte/Hauptspeise/">Hauptspeise</a>
+                                </li>
+
+                                <li class="tag-item">
+
+                                    <a href="https://www.rewe.de/rezepte/leicht/">Geringer Aufwand</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-5 col-md-offset-1 col-lg-4  col-print-4  col-print-offset-0 print-force-visible">
+
+
+                    <div class="recipe-ingridients controller" data-controller="master/fragments/recipes/Ingredients"
+                         data-recipe-title="Cannelloni mit Hackfleisch">
+
+
+                        <div class="recipe-ingridient-content" action="//shop.rewe.de/" target="_self">
+                            <div class="portions">
+
+
+                                <div class="shop-button-wrapper">
+                                    <a href="#" class="btn btn-color hidden-print read-mode-button"
+                                       data-read-mode-button="#recipe" data-trigger="">
+                                        <span class="label-mobile">Zubereitung</span>
+                                        <span class="label-desktop">Kochansicht</span>
+                                        <img src="/docroot/_release/_pages/master/assets/img/fullscreen.svg">
+                                    </a>
+                                </div>
+                                <h2 class="h2 visible-print font-style-body-2 print-amount-label"
+                                    id="jcr-4a8b98f6-94ff-426c-8230-fb23052245ad">
+                                    Zutaten für
+                                    <span class="print-amount">4</span>
+                                    Portionen
+                                </h2>
+                                <hr class="visible-print">
+
+                                <div class="widget hidden-print">
+                                    <a class="btn plus ">
+                                        <svg>
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xlink:href="#inline-icon-plus"></use>
+                                        </svg>
+                                    </a>
+                                    <a class="btn minus">
+                                        <svg>
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                 xlink:href="#inline-icon-minus"></use>
+                                        </svg>
+                                    </a>
+
+                                    <div class="text font-style-body">
+                    <span class="amount">
+                      <input type="text" class="font-style-body" name="portions" value="4" maxlength="2">
+                    </span>
+                                        <input type="hidden" name="recipe_id"
+                                               value="03c3d2c6-1bd7-4f73-8ad7-b6f9b6cb0072">
+                                        Portionen
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="hint font-style-caption margin-vertical-half hidden">
+                                Sie möchten mehr oder weniger Portionen zubereiten? Denken Sie daran, auch die Mengen in
+                                den Zubereitungschritten anzupassen.
+                            </div>
+
+
+                            <ul class="list-unstyled ingridient-list font-style-body">
+
+
+                                <li data-unit="g" data-product="Hackfleisch">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="750">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">750</span>
+
+
+                                                <span class="unit">g</span>
+
+                                                Hackfleisch
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="EL" data-product="Öl">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="2">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">2</span>
+
+
+                                                <span class="unit">EL</span>
+
+                                                Öl
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="" data-product="Zwiebel">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="1">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">1</span>
+
+
+                                                Zwiebel
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="" data-product="Knoblauchzehen">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="2">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">2</span>
+
+
+                                                Knoblauchzehen
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="g" data-product="passierte Tomaten">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="600">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">600</span>
+
+
+                                                <span class="unit">g</span>
+
+                                                passierte Tomaten
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="" data-product="Salz">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="0">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text">Salz</div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="" data-product="Pfeffer">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="0">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text">Pfeffer</div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="EL" data-product="Zucker">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="1">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">1</span>
+
+
+                                                <span class="unit">EL</span>
+
+                                                Zucker
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="g" data-product="Cannelloni">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="250">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">250</span>
+
+
+                                                <span class="unit">g</span>
+
+                                                Cannelloni
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="g" data-product="Butter">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="25">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">25</span>
+
+
+                                                <span class="unit">g</span>
+
+                                                Butter
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="g" data-product="Mehl">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="25">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">25</span>
+
+
+                                                <span class="unit">g</span>
+
+                                                Mehl
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="ml" data-product="Milch">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="300">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">300</span>
+
+
+                                                <span class="unit">ml</span>
+
+                                                Milch
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="g" data-product="Frischkäse">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="70">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">70</span>
+
+
+                                                <span class="unit">g</span>
+
+                                                Frischkäse
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="g" data-product="Parmesan">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="70">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">70</span>
+
+
+                                                <span class="unit">g</span>
+
+                                                Parmesan
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="" data-product="geriebene Muskatnuss">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="0">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text">geriebene Muskatnuss</div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+
+                                <li data-unit="Bund" data-product="Basilikum">
+                                    <input type="hidden" name="ingredient[id]"
+                                           value="ffe3b731-3a8a-43af-8306-418c07783443">
+
+
+                                    <input type="hidden" class="amount" name="ingredient[amount]" value="0.5">
+
+
+                                    <div class="form-group rewe-checkbox ">
+                                        <label>
+                                            <input type="checkbox" class="no-mouseflow " name="" value="" checked="">
+                                            <div class="state-indicator">
+                                                <svg class="icon">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-tick"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="label-text"><span class="amount-text">0,5</span>
+
+
+                                                <span class="unit">Bund</span>
+
+                                                Basilikum
+                                            </div>
+                                        </label>
+                                    </div>
+
+
+                                </li>
+
+                            </ul>
+
+                            <div class="recipe-whatsapp visible-xs-block margin-bottom-1 hidden-print"
+                                 data-title="Cannelloni mit Hackfleisch"
+                                 data-link="https://www.rewe.de/rezepte/cannelloni-mit-hackfleisch/"
+                                 data-img="/docroot/_release/_pages/master/assets/img/WhatsApp.svg"><a
+                                    class="btn btn-block btn-default"
+                                    href="whatsapp://send?text=Cannelloni%20mit%20Hackfleisch%0AZutaten%20f%C3%BCr%204%20Personen%0A%0A750%20g%20Hackfleisch%0A2%20EL%20%C3%96l%0AZwiebel%0A2%20Knoblauchzehen%0A600%20g%20passierte%20Tomaten%0ASalz%0APfeffer%0A1%20EL%20Zucker%0A250%20g%20Cannelloni%0A25%20g%20Butter%0A25%20g%20Mehl%0A300%20ml%20Milch%0A70%20g%20Frischk%C3%A4se%0A70%20g%20Parmesan%0Ageriebene%20Muskatnuss%0A0.5%20Bund%20Basilikum%0A%0A%0Ahttps%3A%2F%2Fwww.rewe.de%2Frezepte%2Fcannelloni-mit-hackfleisch%2F">
+                                <img src="/docroot/_release/_pages/master/assets/img/WhatsApp.svg" alt="icon">
+                                <span class="label">Zutaten per WhatsApp teilen</span>
+                            </a>
+                            </div>
+                            <div class="shop-button-wrapper">
+                                <a class="btn btn-color hidden-print " href="//shop.rewe.de" target="_blank" title=""
+                                   name="">
+
+                                    <span class="label"></span>
+
+                                    <div class="shop-button " data-rewe-button="" data-user-servings="4"
+                                         data-rewe-button-size="xl"><a
+                                            class="rewe-delivery-button rewe-button rewe-button-size-xl"
+                                            href="https://shop.rewe.de/api/ingredients/mapper"></a></div>
+                                    <script type="text/javascript" src="https://shop.rewe.de/ingredients/button.js"
+                                            async=""></script>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal no-chrome controller " data-controller="master/fragments/RecipeStepsModal" id="recipeSteps"
+             data-fragment="modal">
+            <section data-element="content-container" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                        <section data-module="content" class="content">
+                            <div class="close-button" data-element="close">
+                                <span>Schließen</span>
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                         xlink:href="#inline-icon-close"></use>
+                                </svg>
+                            </div>
+
+                            <div class="slick-wrapper recipe-steps-slider">
+                                <ol class="slick slider-recipe recipe-preparation list-unstyled slick-initialized slick-slider slick-dotted"
+                                    id="slider-recipe-steps" data-slick="{
+                                    &quot;dots&quot;: true,
+                                    &quot;arrows&quot;: false,
+                                    &quot;infinite&quot;: false,
+                                    &quot;speed&quot;: 300,
+                                    &quot;slidesToShow&quot;: 1,
+                                    &quot;centerMode&quot;: false,
+                                    &quot;adaptiveHeight&quot;: true,
+                                    &quot;slide&quot;: &quot;.recipe-step&quot;
+                                    }">
+
+                                    <div class="slick-list draggable" style="height: 77px;">
+                                        <div class="slick-track"
+                                             style="opacity: 1; width: 12696px; transform: translate3d(0px, 0px, 0px);">
+
+                                            {{ range .Params.steps }}
+                                            <li class="recipe-step avoid-pbi slick-slide slick-current slick-active"
+                                                data-slick-index="0" aria-hidden="false" tabindex="0" role="tabpanel"
+                                                id="slick-slide00" aria-describedby="slick-slide-control00"
+                                                style="width: 2116px;">
+
+                                                <div class="text font-style-body">
+                                                    <p>{{ .description }}</p>
+                                                </div>
+                                            </li>
+                                            {{ end }}
+
+                                        </div>
+                                    </div>
+
+                                    <ul class="slick-dots" style="" role="tablist">
+                                        <li class="slick-active" role="presentation">
+                                            <button type="button" role="tab" id="slick-slide-control00"
+                                                    aria-controls="slick-slide00" aria-label="1 of 6" tabindex="0"
+                                                    aria-selected="true">1
+                                            </button>
+                                        </li>
+                                        <li role="presentation">
+                                            <button type="button" role="tab" id="slick-slide-control01"
+                                                    aria-controls="slick-slide01" aria-label="2 of 6" tabindex="-1">2
+                                            </button>
+                                        </li>
+                                        <li role="presentation">
+                                            <button type="button" role="tab" id="slick-slide-control02"
+                                                    aria-controls="slick-slide02" aria-label="3 of 6" tabindex="-1">3
+                                            </button>
+                                        </li>
+                                        <li role="presentation">
+                                            <button type="button" role="tab" id="slick-slide-control03"
+                                                    aria-controls="slick-slide03" aria-label="4 of 6" tabindex="-1">4
+                                            </button>
+                                        </li>
+                                        <li role="presentation">
+                                            <button type="button" role="tab" id="slick-slide-control04"
+                                                    aria-controls="slick-slide04" aria-label="5 of 6" tabindex="-1">5
+                                            </button>
+                                        </li>
+                                        <li role="presentation">
+                                            <button type="button" role="tab" id="slick-slide-control05"
+                                                    aria-controls="slick-slide05" aria-label="6 of 6" tabindex="-1">6
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </ol>
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    </section>
+
+</div>
+
+
 {{ partial "footer" . }}
+
+
