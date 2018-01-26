@@ -55,21 +55,17 @@ collections: # A list of collections the CMS should be able to edit
       - name: difficulty
         label: Difficulty
         widget: select
-        fields:
-          - {label: Leicht, name: 1, widget: string}
-          - {label: Mittel, name: 2, widget: string}
-          - {label: Schwer, name: 3, widget: string}
+        options:
+          - {label: Leicht, value: 1}
+          - {label: Mittel, value: 2}
+          - {label: Schwer, value: 3}
       - name: steps
         label: Steps
         widget: list
         fields: 
-          - name: step
-            label: Step
-            widget: object
-            fields:
-              - name: images
-                label: images
-                widget: string
-              - name: description
-                label: Description
-                widget: string
+          - name: images
+            label: images
+            widget: string
+          - name: description
+            label: Description
+            widget: string
