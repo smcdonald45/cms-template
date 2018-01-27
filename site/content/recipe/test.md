@@ -17,5 +17,9 @@ steps:
       Butter in einem kleinen Topf schmelzen. Mehl mit einem Schneebesen
       einrühren, Milch langsam und unter Rühren zugießen. Unter Rühren ca. 2
       Minuten köcheln lassen.
+ingredients:
+  - ingredient: Öl
+    quantity: '1'
+    unit: EL
 ---
 
