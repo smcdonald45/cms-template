@@ -1,12 +1,12 @@
 ---
-name: test
+name: cannelloni
 title: CANNELLONI MIT HACKFLEISCH
 image: /img/acai-bowl_rdk-rds_rv_hd.jpeg
 description: test
 difficulty: '2'
 steps:
   - description: >-
-      Hackfleisch in 1 EL heißem Öl krümelig braten. Herausnehmen und beiseite
+      Hackfleisch in 1 EL heißem Öl krümelig braten! Herausnehmen und beiseite
       stellen.
   - description: >-
       Zwiebel und Knoblauch schälen, hacken. Beides in 1 EL Öl glasig dünsten.
