@@ -6,7 +6,7 @@ description: test
 difficulty: '2'
 steps:
   - description: >-
-      Hackfleisch in 1 EL heißem Öl krümelig braten. Herausnehmen und beiseite
+      Hackfleisch in 1 EL heißem Öl krümelig braten! Herausnehmen und beiseite
       stellen.
   - description: >-
       Zwiebel und Knoblauch schälen, hacken. Beides in 1 EL Öl glasig dünsten.
@@ -17,12 +17,5 @@ steps:
       Butter in einem kleinen Topf schmelzen. Mehl mit einem Schneebesen
       einrühren, Milch langsam und unter Rühren zugießen. Unter Rühren ca. 2
       Minuten köcheln lassen.
-ingredients:
-  - ingredient: Hackfleisch
-    quantity: '750'
-    unit: g
-  - ingredient: Öl
-    quantity: '2'
-    unit: EL
 ---
 
