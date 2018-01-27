@@ -69,3 +69,21 @@ collections: # A list of collections the CMS should be able to edit
           - name: description
             label: Description
             widget: string
+      - name: ingredients
+        label: Ingredients
+        widget: list
+        fields:
+          - name: ingredient
+            label: Ingredient
+            widget: string
+          - name: quantity
+            label: Quantity
+            widget: string
+          - name: unit
+            label: Unit
+            widget: select
+            options:
+              - {label: (ohne), value: 0}
+              - {label: EL, value: EL}
+              - {label: g, value: g}
+              - {label: ml, value: ml}
