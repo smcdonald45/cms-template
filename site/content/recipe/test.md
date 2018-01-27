@@ -1,5 +1,5 @@
 ---
-name: test
+name: cannelloni
 title: CANNELLONI MIT HACKFLEISCH
 image: /img/acai-bowl_rdk-rds_rv_hd.jpeg
 description: test
@@ -17,5 +17,12 @@ steps:
       Butter in einem kleinen Topf schmelzen. Mehl mit einem Schneebesen
       einrühren, Milch langsam und unter Rühren zugießen. Unter Rühren ca. 2
       Minuten köcheln lassen.
+ingredients:
+  - ingredient: Hackfleisch
+    quantity: '750'
+    unit: g
+  - ingredient: Öl
+    quantity: '2'
+    unit: EL
 ---
 
