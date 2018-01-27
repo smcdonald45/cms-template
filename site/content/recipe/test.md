@@ -21,5 +21,8 @@ ingredients:
   - ingredient: Öl
     quantity: '1'
     unit: EL
+  - ingredient: Hackfleisch
+    quantity: '750'
+    unit: g
 ---
 
