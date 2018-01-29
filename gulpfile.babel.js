@@ -35,7 +35,7 @@ gulp.task("cms", () => {
     .pipe(browserSync.stream())
 });
 
-gulp.task("build", ["css", "js", "hugo", "cms"]);
+gulp.task("build", ["css", "js", "hugo", "cms", "copyfonts"]);
 gulp.task("build-preview", ["css", "js", "hugo-preview"]);
 
 gulp.task("css", () => (
@@ -90,6 +90,11 @@ gulp.task("server", ["hugo", "css", "js", "svg", "cms"], () => {
   gulp.watch("./src/cms/*", ["cms"]);
   gulp.watch("./site/static/img/icons/*.svg", ["svg"]);
   gulp.watch("./site/**/*", ["hugo"]);
+});
+
+gulp.task('copyfonts', function() {
+    gulp.src('site/static/cms-base-lib/fonts/**/*.{ttf,woff,eof,svg}')
+        .pipe(gulp.dest('./dist/'));
 });
 
 function buildSite(cb, options) {

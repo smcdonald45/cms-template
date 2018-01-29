@@ -218,21 +218,21 @@ export default class PostPreview extends React.Component {
 
 
                                     <ul class="list-unstyled ingridient-list font-style-body">
-                                        <li data-unit="g" data-product="Hackfleisch">
-                                            <input type="hidden" name="ingredient[id]"
-                                                   value="ffe3b731-3a8a-43af-8306-418c07783443"/>
-                                            <input type="hidden" class="amount" name="ingredient[amount]" value="750"/>
-                                            <div class="form-group rewe-checkbox ">
+                                        {(entry.getIn(["data", "ingredients"]) || []).map((ingredient, index) => <li data-unit="g" data-product="{ingredient.get('ingredient')}">
+                                            <input type="hidden" name="ingredient[id]" value="ffe3b731-3a8a-43af-8306-418c07783443"/>
+                                            <input type="hidden" class="amount" name="ingredient[amount]" value="{ingredient.get('quantity')}"/>
+                                            <div class="form-group rewe-checkbox">
                                                 <label>
-                                                    <input type="checkbox" class="no-mouseflow " name="" value=""
-                                                           checked=""/>
+                                                    <input type="checkbox" class="no-mouseflow " name="" value="" checked=""/>
                                                     <div class="state-indicator"></div>
-                                                    <div class="label-text"><span class="amount-text">750</span>
-                                                        <span class="unit">g</span>Hackfleisch
+                                                    <div class="label-text">
+                                                        <span class="amount-text">{ingredient.get("quantity")}</span>
+                                                        <span class="unit">{ingredient.get("unit")}</span>
+                                                        {ingredient.get("ingredient")}
                                                     </div>
                                                 </label>
                                             </div>
-                                        </li>
+                                        </li>)}
                                     </ul>
 
                                     {/*<div class="recipe-whatsapp visible-xs-block margin-bottom-1 hidden-print"*/}
