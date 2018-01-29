@@ -5,13 +5,91 @@
 
 <h3>{{ .Params.title }}</h3>
 <div class="mw7 center">
-  <ul class="flex-ns flex-wrap mhn1-ns mv0 pa3">
-      {{ range .Data.Pages }}
-          <div class="w-50-ns ph1-ns flex">
-            {{ .Render "li"}}
-          </div>
-      {{ end }}
-  </ul>
+    <ul class="flex-ns flex-wrap mhn1-ns mv0 pa3">
+        {{ range .Data.Pages }}
+        <div class="w-50-ns ph1-ns flex">
+            <div class="favorite-recipe-card controller w-100"
+                 data-controller="master/modules/RecipeCard"
+                 data-recipe-title="Indisches Blumenkohl-Curry mit Reis und frischem Mango-Chutney"
+                 data-recipe-amount="4" data-uuid="c93c8011-5ccc-4cf0-95ab-f1f71baf7af4">
+                <div class="rdk-teaser rdk-recipe-teaser">
+                    <a href="{{ .Permalink }}" class="rdk-card hover-box-shadow" data-page-number="1">
+                        <div class="teaser-picture">
+                            <svg class="logo">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-logo"></use>
+                            </svg>
+                            <picture class="picture cover hidden-print">
+                                <source media="(min-width: 768px)"
+                                        data-srcset="https://clever-hoover-538d35.netlify.com/{{ .Params.image }}"
+                                        srcset="https://clever-hoover-538d35.netlify.com/{{ .Params.image }}">
+                                <img src="https://clever-hoover-538d35.netlify.com/{{ .Params.image }}"
+                                     data-srcset="ttps://clever-hoover-538d35.netlify.com/{{ .Params.image }}"
+                                     srcset="ttps://clever-hoover-538d35.netlify.com/{{ .Params.image }}">
+                            </picture>
+                        </div>
+
+                        <div class="recipe-info">
+                            <p class="recipe-title font-style-body ">{{ .Title }}</p>
+                            <div class="recipe-meta">
+                                <div class="meta-time">
+                                    <svg>
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xlink:href="#inline-icon-clock"></use>
+                                    </svg>
+                                    <span class="font-style-caption">60 min</span>
+                                </div>
+                                <div class="meta-level font-style-caption">
+                                <span class="spoon active">
+                                    <svg>
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xlink:href="#inline-icon-spoon-rdkv2"></use>
+                                    </svg>
+                                </span>
+                                    <span class="spoon active">
+                                    <svg>
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xlink:href="#inline-icon-spoon-rdkv2"></use>
+                                    </svg>
+                                </span>
+                                    <span class="spoon">
+                                    <svg>
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xlink:href="#inline-icon-spoon-rdkv2"></use>
+                                    </svg>
+                                </span>
+                                    <span class="font-style-caption">Mittel</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <div class="rdk-recipe-favor">
+                        <div class="favor-label-wrapper" data-favor="">
+                            <svg class="favor-ribbon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     xlink:href="#inline-icon-rdk-ribbon"></use>
+                            </svg>
+
+                            <svg class="favor-state favored">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     xlink:href="#inline-icon-rdk-favored"></use>
+                            </svg>
+
+                            <svg class="favor-state unfavored ">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     xlink:href="#inline-icon-rdk-unfavored"></use>
+                            </svg>
+                        </div>
+                        <div class="arrow-box position-right ">
+                            In <a href="https://www.rewe.de/meine-rezepte/" data-favorites-link="">Meine Rezepte</a>
+                            gespeichert
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </ul>
 </div>
 
 {{ partial "footer" . }}
