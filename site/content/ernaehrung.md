@@ -1,13 +1,16 @@
 ---
-title: Rabbits
+title: Ernährung
 type: products
 page: /products.html
 image: /img/products/jumbotron.jpg
-heading: What we offering!!!
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it! We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+tiles:
+  - elements:
+      - headline: Hülsenfrüchte
+        image: /img/ew_disruptive-green_rdk_kv.jpg
+        link: 'https://www.rewe.de/ernaehrung/huelsenfruechte'
+      - headline: Kumpir - Türkische Ofenkartoffeln
+        image: /img/kumpir_hack_rdk-rds_rv_hd.jpg
+        link: 'https://www.rewe.de/ernaehrung/kumpir'
+    title: Ernährungswelten
 ---
 
