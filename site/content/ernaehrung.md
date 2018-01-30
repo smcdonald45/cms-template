@@ -6,9 +6,11 @@ image: /img/products/jumbotron.jpg
 tiles:
   - elements:
       - headline: Hülsenfrüchte
+        image: /img/ew_disruptive-green_rdk_kv.jpg
         link: 'https://www.rewe.de/ernaehrung/huelsenfruechte'
-      - headline: Kaffee
-        link: 'https://www.rewe.de/ernaehrung/kaffee'
+      - headline: Kumpir - Türkische Ofenkartoffeln
+        image: /img/kumpir_hack_rdk-rds_rv_hd.jpg
+        link: 'https://www.rewe.de/ernaehrung/kumpir'
     title: Ernährungswelten
 ---
 
