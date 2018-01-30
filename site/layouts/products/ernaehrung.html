@@ -2,6 +2,7 @@
 {{ partial "nav" . }}
 {{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
 
+<meso-content>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
 
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" class="is-hidden" id="rewe-sprite" style="display:none;">
@@ -1291,5 +1292,6 @@
         });
     });
 </script>
+</meso-content>
 
 {{ partial "footer" . }}
