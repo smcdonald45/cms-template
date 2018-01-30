@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: "https://github.com/smcdonald45/gatsby-netlify-cms"
+  repo: <% GITHUB_REPOSITORY %> # Gulp will replace this with your GitHub repository
   branch: master # Branch to update (master by default)
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
@@ -35,6 +35,14 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Testimonials, name: testimonials, widget: list, fields: [{label: Quote, name: quote, widget: string}, {label: Author, name: author, widget: string}]}
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
+      - file: "site/content/ernaehrung.md"
+        label: "Ernährung"
+        name: "ernaehrung"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Type, name: type, widget: hidden, default: products}
+          - {label: Page, name: page, widget: hidden, default: "/ernaehrung.html"}
+          - {label: Image, name: image, widget: image}
   - name: "recipe"
     label: "Rezept"
     folder: "site/content/recipe"
