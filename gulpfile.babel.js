@@ -26,6 +26,7 @@ gulp.task("cms", () => {
   match.replace(/github.com[:/](\S+)(\.git)?/, (_, m) => {
     repo = m.replace(/\.git$/, "");
   });
+  repo = "https://github.com/smcdonald45/gatsby-netlify-cms";
   gulp.src("./src/cms/*")
     .pipe(replace("<% GITHUB_REPOSITORY %>", repo))
     .pipe(gulp.dest("./dist/admin"))
