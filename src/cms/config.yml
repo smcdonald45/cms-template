@@ -43,6 +43,26 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Type, name: type, widget: hidden, default: products}
           - {label: Page, name: page, widget: hidden, default: "/ernaehrung.html"}
           - {label: Image, name: image, widget: image}
+          - name: tiles
+            label: Tiles
+            widget: list
+            fields:
+              - name: title
+                label: Title
+                widget: string
+              - name: elements
+                label: Elements
+                widget: list
+                fields:
+                  - name: link
+                    label: Link
+                    widget: string
+                  - name: image
+                    label: Image
+                    widget: image
+                  - name: headline
+                    label: Headline
+                    widget: string
   - name: "recipe"
     label: "Rezept"
     folder: "site/content/recipe"
