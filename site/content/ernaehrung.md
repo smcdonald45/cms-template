@@ -1,7 +1,8 @@
 ---
 title: Ernährung
 type: products
-page: /products.html
+layout: ernaehrung
+page: /ernaehrung.html
 image: /img/products/jumbotron.jpg
 tiles:
   - elements:
