@@ -28,7 +28,6 @@ gulp.task("cms", () => {
   });
   repo = "https://github.com/smcdonald45/gatsby-netlify-cms";
   gulp.src("./src/cms/*")
-    .pipe(replace("<% GITHUB_REPOSITORY %>", repo))
     .pipe(gulp.dest("./dist/admin"))
     .pipe(browserSync.stream());
   gulp.src(["./node_modules/netlify-cms/dist/*.*", "!./node_modules/netlify-cms/dist/*.html"])
