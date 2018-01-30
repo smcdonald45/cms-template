@@ -1,7 +1,7 @@
 ---
 name: cannelloni
 title: CANNELLONI MIT HACKFLEISCH
-image: /img/acai-bowl_rdk-rds_rv_hd.jpeg
+image: /img/killer_bunny_by_the_weazle.png
 description: test
 difficulty: '2'
 steps:
@@ -27,5 +27,8 @@ ingredients:
   - ingredient: dsaadasdsdfafsdf
     quantity: '1111'
     unit: EL
+  - ingredient: knoblauch
+    quantity: '2'
+    unit: '0'
 ---
 
