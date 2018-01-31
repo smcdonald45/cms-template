@@ -9,7 +9,7 @@ steps:
   - description: >-
       Schalotte und Knoblauch schälen und fein würfeln. 1 EL Öl in einem Topf erhitzen, Schalotte und Knoblauch darin andünsten. Erbsen zugeben und alles ca. 8 Minuten dünsten. Mit Salz und Pfeffer würzen.
   - description: >-
-      Kartoffeln gründlich waschen und ca. 20 Minuten kochen. Kartoffeln zu den Erbsen geben und alles zerstampfen. Thymian und Oregano waschen,  trocken schütteln und hacken. Parmesan reiben. ⅔ der Kräuter, 1 EL Öl und Hälfte Parmesan unter die Erbsenmasse heben. Mit Salz und Pfeffer abschmecken.
+      Kartoffeln gründlich waschen und ca. 20 Minuten kochen. Kartoffeln zu den Erbsen geben und alles zerstampfen. Thymian und Oregano waschen, trocken schütteln und hacken. Parmesan reiben. ⅔ der Kräuter, 1 EL Öl und Hälfte des Parmesans unter die Erbsenmasse heben. Mit Salz und Pfeffer abschmecken.
   - description: >-
       Für die Soße Sahne mit den restlichen Kräutern mischen und mit Salz und Pfeffer abschmecken.
   - description: >-
