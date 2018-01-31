@@ -1,7 +1,6 @@
 ---
 title: Ernährung
 type: products
-layout: ernaehrung
 page: /ernaehrung.html
 image: /img/products/jumbotron.jpg
 tiles:
@@ -41,7 +40,11 @@ tiles:
         link: 'https://www.rewe.de/ernaehrung/kumpir'
       - headline: Kumpir - Türkische Ofenkartoffeln
         image: /img/kumpir_hack_rdk-rds_rv_hd.jpg
-        link: 'https://www.rewe.de/ernaehrung/kumpir'                                                                       
-    title: Ernährungswelten
+        link: 'https://www.rewe.de/ernaehrung/kumpir'
+    title: Food Trends
+  - elements:
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+    title: Klassiker und andere Leckerbissen
 ---
 
