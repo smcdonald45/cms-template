@@ -1,4 +1,4 @@
-baseurl = "https://clever-hoover-538d35.netlify.com"
-#baseurl = "http://localhost:3000"
+#baseurl = "https://clever-hoover-538d35.netlify.com"
+baseurl = "http://localhost:3000"
 languageCode = "en-us"
 title = "Homepage"
