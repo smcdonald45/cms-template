@@ -1,7 +1,8 @@
 ---
-title: Ernährung
+title: "GESUNDE ERNÄHRUNG: TIPPS & INFORMATIONEN"
 type: products
 page: /ernaehrung.html
+layout: ernaehrung
 image: /img/products/jumbotron.jpg
 tiles:
   - elements:
@@ -45,6 +46,24 @@ tiles:
   - elements:
       - headline: Super Bowl Rezepte - Amerikanischer Abend
         image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg
+      - headline: Super Bowl Rezepte - Amerikanischer Abend
+        image: /img/chicken-wings_rdk-rds_rv_hd.jpg                                
     title: Klassiker und andere Leckerbissen
 ---
 
