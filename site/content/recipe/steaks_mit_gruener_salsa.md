@@ -3,7 +3,7 @@ name: "steaks_mit_gruener_salsa"
 description: "Steaks mit grüner Salsa"
 title: "Steaks mit grüner Salsa"
 difficulty: "3"
-image: img/steaks_mit_gruener_salsa.jpg
+image: /img/steaks_mit_gruener_salsa.jpg
 imageUrl: https://i.rewe-static.de/rezepte/rewe-de/rezepte-und-gesund-geniessen/rezepte/largeImages/Steak_mit_gru-ner_Salsa_image_d.jpg?resize=1480:589&crop=1280:460;center,center
 steps:
   - description: >-

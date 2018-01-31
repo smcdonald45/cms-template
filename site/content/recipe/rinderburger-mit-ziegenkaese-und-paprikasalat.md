@@ -3,7 +3,7 @@ name: "rinderburger-mit-ziegenkaese-und-paprikasalat"
 description: "Rinderburger mit Ziegenkäse und Paprikasalat"
 title: "Rinderburger mit Ziegenkäse und Paprikasalat"
 difficulty: "2"
-image: img/rinderburger-mit-ziegenkaese-und-paprikasalat.jpg
+image: /img/rinderburger-mit-ziegenkaese-und-paprikasalat.jpg
 imageUrl: https://i.rewe-static.de/rezepte/rewe-de/rezepte-und-gesund-geniessen/rezepte/2015_rdw/kw26_rdw/rdw_cil_d.jpg?resize=1480:589&crop=1280:460;center,center
 steps:
   - description: >-
