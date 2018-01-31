@@ -262,16 +262,10 @@
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-5 col-md-offset-1 col-lg-4  col-print-4  col-print-offset-0 print-force-visible">
-
-
                     <div class="recipe-ingridients controller" data-controller="master/fragments/recipes/Ingredients"
                          data-recipe-title="Cannelloni mit Hackfleisch">
-
-
                         <div class="recipe-ingridient-content" action="//shop.rewe.de/" target="_self">
                             <div class="portions">
-
-
                                 <div class="shop-button-wrapper">
                                     <a href="#" class="btn btn-color hidden-print read-mode-button"
                                        data-read-mode-button="#recipe" data-trigger="">
@@ -303,23 +297,19 @@
                                     </a>
 
                                     <div class="text font-style-body">
-                    <span class="amount">
-                      <input type="text" class="font-style-body" name="portions" value="4" maxlength="2">
-                    </span>
-                                        <input type="hidden" name="recipe_id"
-                                               value="03c3d2c6-1bd7-4f73-8ad7-b6f9b6cb0072">
+                                        <span class="amount">
+                                          <input type="text" class="font-style-body" name="portions" value="4" maxlength="2">
+                                        </span>
+                                        <input type="hidden" name="recipe_id" value="03c3d2c6-1bd7-4f73-8ad7-b6f9b6cb0072">
                                         Portionen
-
                                     </div>
                                 </div>
                             </div>
-
 
                             <div class="hint font-style-caption margin-vertical-half hidden">
                                 Sie möchten mehr oder weniger Portionen zubereiten? Denken Sie daran, auch die Mengen in
                                 den Zubereitungschritten anzupassen.
                             </div>
-
 
                             <ul class="list-unstyled ingridient-list font-style-body">
 
@@ -336,7 +326,9 @@
                                                 </svg>
                                             </div>
                                             <div class="label-text"><span class="amount-text">{{ .quantity }}</span>
+                                                {{ if ne .unit "(ohne)" }}
                                                 <span class="unit">{{ .unit }}</span>
+                                                {{ end }}
                                                 {{ .ingredient }}
                                             </div>
                                         </label>
