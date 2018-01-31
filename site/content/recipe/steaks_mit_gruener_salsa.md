@@ -1,6 +1,7 @@
 ---
 name: "steaks_mit_gruener_salsa"
 description: "Steaks mit grüner Salsa"
+title: "Steaks mit grüner Salsa"
 difficulty: "3"
 steps:
   - description: >-

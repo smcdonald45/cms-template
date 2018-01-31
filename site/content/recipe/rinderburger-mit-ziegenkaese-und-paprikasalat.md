@@ -1,6 +1,7 @@
 ---
 name: "rinderburger-mit-ziegenkaese-und-paprikasalat"
 description: "Rinderburger mit Ziegenkäse und Paprikasalat"
+title: "Rinderburger mit Ziegenkäse und Paprikasalat"
 difficulty: "2"
 steps:
   - description: >-
