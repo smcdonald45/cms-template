@@ -8320,56 +8320,56 @@ a, strong {
     font-family: 'UnitRoundedOT';
     font-style: normal;
     font-weight: normal;
-    src: url("../cms-base-lib/fonts/UnitRoundedOT.eot") format("embedded-opentype"), url("../cms-base-lib/fonts/UnitRoundedOT.woff") format("woff"), url("../cms-base-lib/fonts/UnitRoundedOT.ttf") format("truetype"), url("../cms-base-lib/fonts/UnitRoundedOT.svg#UnitRoundedOT") format("svg")
+    src: url("./cms-base-lib/fonts/UnitRoundedOT.eot") format("embedded-opentype"), url("./cms-base-lib/fonts/UnitRoundedOT.woff") format("woff"), url("./cms-base-lib/fonts/UnitRoundedOT.ttf") format("truetype"), url("./cms-base-lib/fonts/UnitRoundedOT.svg#UnitRoundedOT") format("svg")
 }
 
 @font-face {
     font-family: 'UnitRoundedOT-Light';
     font-style: normal;
     font-weight: normal;
-    src: url("../cms-base-lib/fonts/UnitRoundedOT-Light.woff") format("woff")
+    src: url("./cms-base-lib/fonts/UnitRoundedOT-Light.woff") format("woff")
 }
 
 @font-face {
     font-family: 'UnitRoundedOT-Medi';
     font-style: normal;
     font-weight: normal;
-    src: url("../cms-base-lib/fonts/UnitRoundedOT-Medi.eot") format("embedded-opentype"), url("../cms-base-lib/fonts/UnitRoundedOT-Medi.woff") format("woff"), url("../cms-base-lib/fonts/UnitRoundedOT-Medi.ttf") format("truetype"), url("../cms-base-lib/fonts/UnitRoundedOT-Medi.svg#UnitRoundedOT-Medi") format("svg")
+    src: url("./cms-base-lib/fonts/UnitRoundedOT-Medi.eot") format("embedded-opentype"), url("./cms-base-lib/fonts/UnitRoundedOT-Medi.woff") format("woff"), url("./cms-base-lib/fonts/UnitRoundedOT-Medi.ttf") format("truetype"), url("./cms-base-lib/fonts/UnitRoundedOT-Medi.svg#UnitRoundedOT-Medi") format("svg")
 }
 
 @font-face {
     font-family: 'UnitRoundedOT-Bold';
     font-style: normal;
     font-weight: normal;
-    src: url("../cms-base-lib/fonts/UnitRoundedOT-Bold.eot") format("embedded-opentype"), url("../cms-base-lib/fonts/UnitRoundedOT-Bold.woff") format("woff"), url("../cms-base-lib/fonts/UnitRoundedOT-Bold.ttf") format("truetype"), url("../cms-base-lib/fonts/UnitRoundedOT-Bold.svg#UnitRoundedOT-Bold") format("svg")
+    src: url("./cms-base-lib/fonts/UnitRoundedOT-Bold.eot") format("embedded-opentype"), url("./cms-base-lib/fonts/UnitRoundedOT-Bold.woff") format("woff"), url("./cms-base-lib/fonts/UnitRoundedOT-Bold.ttf") format("truetype"), url("./cms-base-lib/fonts/UnitRoundedOT-Bold.svg#UnitRoundedOT-Bold") format("svg")
 }
 
 @font-face {
     font-family: 'Rewe_Pop-Regular';
     font-style: normal;
     font-weight: 400;
-    src: url("../cms-base-lib/fonts/Rewe_Pop-Regular.eot"), url("../cms-base-lib/fonts/Rewe_Pop-Regular.eot?#iefix") format("embedded-opentype"), url("../cms-base-lib/fonts/Rewe_Pop-Regular.woff") format("woff"), url("../cms-base-lib/fonts/Rewe_Pop-Regular.ttf") format("truetype")
+    src: url("./cms-base-lib/fonts/Rewe_Pop-Regular.eot"), url("./cms-base-lib/fonts/Rewe_Pop-Regular.eot?#iefix") format("embedded-opentype"), url("./cms-base-lib/fonts/Rewe_Pop-Regular.woff") format("woff"), url("./cms-base-lib/fonts/Rewe_Pop-Regular.ttf") format("truetype")
 }
 
 @font-face {
     font-family: 'Rewe_Pop-Regular_tt';
     font-style: normal;
     font-weight: 400;
-    src: url("../cms-base-lib/fonts/Rewe_Pop-Regular.eot"), url("../cms-base-lib/fonts/Rewe_Pop-Regular.eot?#iefix") format("embedded-opentype"), url("../cms-base-lib/fonts/Rewe_Pop-Regular.woff") format("woff"), url("../cms-base-lib/fonts/Rewe_Pop-Regular.ttf") format("truetype")
+    src: url("./cms-base-lib/fonts/Rewe_Pop-Regular.eot"), url("./cms-base-lib/fonts/Rewe_Pop-Regular.eot?#iefix") format("embedded-opentype"), url("./cms-base-lib/fonts/Rewe_Pop-Regular.woff") format("woff"), url("./cms-base-lib/fonts/Rewe_Pop-Regular.ttf") format("truetype")
 }
 
 @font-face {
     font-family: 'Rewe_Pop-Bold';
     font-style: normal;
     font-weight: normal;
-    src: url("../cms-base-lib/fonts/Rewe_POP-Bold.eot"), url("../cms-base-lib/fonts/Rewe_POP-Bold.eot#iefix") format("embedded-opentype"), url("../cms-base-lib/fonts/Rewe_POP-Bold.woff") format("woff")
+    src: url("./cms-base-lib/fonts/Rewe_POP-Bold.eot"), url("./cms-base-lib/fonts/Rewe_POP-Bold.eot#iefix") format("embedded-opentype"), url("./cms-base-lib/fonts/Rewe_POP-Bold.woff") format("woff")
 }
 
 @font-face {
     font-family: RewePrice;
     font-style: normal;
     font-weight: normal;
-    src: url("../cms-base-lib/fonts/RewePrice.eot"), url("../cms-base-lib/fonts/RewePrice.eot?#iefix") format("embedded-opentype"), url("../cms-base-lib/fonts/RewePrice.woff") format("woff")
+    src: url("./cms-base-lib/fonts/RewePrice.eot"), url("./cms-base-lib/fonts/RewePrice.eot?#iefix") format("embedded-opentype"), url("./cms-base-lib/fonts/RewePrice.woff") format("woff")
 }
 
 .rs-glyphiconext {

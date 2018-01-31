@@ -1,6 +1,6 @@
 {{ partial "head" . }}
 {{ partial "nav" . }}
-{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title) }}
+{{ partial "jumbotron" (dict "imageUrl" .Params.image "title" .Title "myBaseUrl" .Site.BaseURL) }}
 
 {{ $baseUrl := .Site.BaseURL }}
 
