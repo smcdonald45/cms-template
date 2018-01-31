@@ -1,13 +1,13 @@
 ---
 name: cannelloni
 title: CANNELLONI MIT HACKFLEISCH
-image: /img/killer_bunny_by_the_weazle.png
+image: /img/EW_Mezze_Bowl_rdk-startseite_kv_1480.jpg
 description: test
 difficulty: '2'
 steps:
   - description: >-
-      Hackfleisch in 1 EL heißem Öl krümelig braten! Herausnehmen und beiseite
-      stellen.
+      Hackfleisch in 1 DASDa asD AS DDSFADFSAEL heißem Öl krümelig braten!
+      Herausnehmen und beiseite stellen.
   - description: >-
       Zwiebel und Knoblauch schälen, hacken. Beides in 1 EL Öl glasig dünsten.
       Hackfleisch zurück in die Pfanne geben, Hälfte Tomaten zugeben und mit
@@ -27,7 +27,7 @@ ingredients:
   - ingredient: dsaadasdsdfafsdf
     quantity: '1111'
     unit: EL
-  - ingredient: knoblauch
+  - ingredient: knoblauchSDFDASFDSAFDSFSD
     quantity: '2'
     unit: '0'
 ---
