@@ -3,6 +3,8 @@ name: "steaks_mit_gruener_salsa"
 description: "Steaks mit grüner Salsa"
 title: "Steaks mit grüner Salsa"
 difficulty: "3"
+image: img/steaks_mit_gruener_salsa.jpg
+imageUrl: https://i.rewe-static.de/rezepte/rewe-de/rezepte-und-gesund-geniessen/rezepte/largeImages/Steak_mit_gru-ner_Salsa_image_d.jpg?resize=1480:589&crop=1280:460;center,center
 steps:
   - description: >-
       Knoblauch schälen und in Scheiben schneiden. Karpern abtropfen lassen. Kräuter waschen, trocken schütteln und Blätter von den Stielen zupfen. Einige Korianderblättchen beiseitelegen. Chili putzen, der Länge nach aufschneiden, waschen und Kerne entfernen. Schote klein schneiden. Vorbereitete Zutaten und Sardellenfilets in ein hohes Gefäß geben und mit einem Pürierstab mixen. Olivenöl dabei langsam einlaufen lassen. Mit Salz, Zitronensaft und Pfeffer abschmecken. Teststeak interne Seite
