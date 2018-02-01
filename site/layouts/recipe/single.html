@@ -8,7 +8,14 @@
 
 <div class="rdkv2">
     <div class="rdk-header recipe-detail-header has-gradient">
-        <picture class="picture cover hidden-print">
+
+        <div id="edit-recipe-btn" style="position: absolute; z-index: 500; top:10px; left: 10px; display: inline;">
+            <a href="https://clever-hoover-538d35.netlify.com/admin/#/collections/recipe/entries/{{ .Params.name }}" target="_blank">
+                <img src="{{ $baseUrl }}/img/icons/edit.png"/>
+            </a>
+        </div>
+
+        <picture class="picture cover hidden-print" onmouseover="" id="recipe-head-image">
             <source media="(min-width: 768px)" data-srcset="{{ $baseUrl }}/{{ .Params.image }}" srcset="{{ $baseUrl }}/{{ .Params.image }}">
             <img src="{{ $baseUrl }}/{{ .Params.image }}" data-srcset="{{ $baseUrl }}/{{ .Params.image }}" srcset="{{ $baseUrl }}/{{ .Params.image }}">
         </picture>
@@ -456,6 +463,17 @@
         </div>
     </section>
 </div>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">
+        $('#recipe-head-image').hover(
+            function(e) {
+                $('#edit-recipe-btn').fadeIn('slow');
+            },function() {
+                $('#edit-recipe-btn').fadeOut('slow');
+            }
+        );
+    </script>
 
 </meso-content>
 
