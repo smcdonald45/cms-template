@@ -8,7 +8,7 @@ steps:
   - description: >-
       Petersilie, Knoblauch und die Hälfte der Zwiebeln fein schneiden. Mit
       Hackfleisch, Gewürzen und Eiern vermengen. Mit Salz und Pfeffer
-      abschmecken. 15-25 Hackbällchen formen.
+      abschmecken. 15-22 Hackbällchen formen.
   - description: Öl in eine Pfanne geben und die Bällchen darin 10-12 Minuten braten.
   - description: >-
       Die übrige Zwiebel fein hacken und mit etwas Öl und Tomatenmark
