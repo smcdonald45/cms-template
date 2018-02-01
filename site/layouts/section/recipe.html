@@ -1,108 +1,3376 @@
 {{ partial "head" . }}
 {{ partial "nav" . }}
+{{ $baseUrl := .Site.BaseURL }}
 
-<div class="pv5 pv6-l ph3 bg-center cover" style="background-image: url('/img/EW_Mezze_Bowl_rdk-startseite_kv_1480.jpg')">
-    <div class="mw7 center ph3">
-        <div class="db mb3">
-            <div class="mw7 relative mb3">
-                <h1 class="f2 f1-l b di lh-title mb3 white mw6 headline font-style-display-05">
-                    REZEPTE
-                </h1>
-            </div>
-            <div class="mw7 relative bg-fix-primary">
+<div class="rdkv2">
+    <div class="rdk-header narrow">
+        <picture class="picture cover">
+            <!--[if IE 9]>
+            <video style="display: none"><![endif]-->
+
+            <img class=" lazyloaded" src="{{ $baseUrl }}/img/recipe/RDK_header_rezepte_winter_rdk-gls_kv_hd.jpg">
+
+            <!--[if IE 9]></video><![endif]-->
+        </picture>
+
+
+        <div class="rdk-logo-wrapper visible-print">
+            <img class="rdk-logo " src="{{ $baseUrl }}/img/icons/rewe-deine-kueche-kochtopf-print.png" alt="rdk-logo">
+        </div>
+
+        <div class="title-container ">
+            <div class="container text-center">
+                <div class="row ">
+                    <div class="col-xs-12 col-print-10 col-print-offset-1 ">
+                        <h1 class="h1 headline font-style-display-05 font-style-bright"
+                            id="jcr-4a8b98f6-94ff-426c-8230-fb23052245ad">Rezeptwelt durchsuchen</h1>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+
+        <div class="breadcrumb-container hidden-print">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-11 visible-md-block visible-lg-block">
+                        <section class="breadcrumb hidden visible-md-block visible-lg-block  container all-white">
+                            <a class="breadcrumb-link" href="/">REWE.de</a>
+                            <span class="breadcrumb-link active">Rezepte</span>
+                        </section>
+
+                        <script id="breadcrumb-ld" type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+    {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+        "@id": "https://www.rewe.de/",
+        "name": "REWE.de"
+        }
+    }
+
+    ,{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+        "@id": "https://www.rewe.de/rezepte/",
+        "name": "Rezepte"
+        }
+    }
+
+]
+}
+
+                        </script>
 
 
-<h3>{{ .Params.title }}</h3>
-<div class="mw7 center">
-    <ul class="flex-ns flex-wrap mhn1-ns mv0 pa3">
-        {{ range .Data.Pages }}
-        <div class="w-50-ns ph1-ns flex">
-            <div class="favorite-recipe-card controller w-100"
-                 data-controller="master/modules/RecipeCard"
-                 data-recipe-title="Indisches Blumenkohl-Curry mit Reis und frischem Mango-Chutney"
-                 data-recipe-amount="4" data-uuid="c93c8011-5ccc-4cf0-95ab-f1f71baf7af4">
-                <div class="rdk-teaser rdk-recipe-teaser">
-                    <a href="{{ .Permalink }}" class="rdk-card hover-box-shadow" data-page-number="1">
-                        <div class="teaser-picture">
-                            <svg class="logo">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-logo"></use>
-                            </svg>
-                            <picture class="picture cover hidden-print">
-                                <source media="(min-width: 768px)"
-                                        data-srcset="https://clever-hoover-538d35.netlify.com/{{ .Params.image }}"
-                                        srcset="https://clever-hoover-538d35.netlify.com/{{ .Params.image }}">
-                                <img src="https://clever-hoover-538d35.netlify.com/{{ .Params.image }}"
-                                     data-srcset="ttps://clever-hoover-538d35.netlify.com/{{ .Params.image }}"
-                                     srcset="ttps://clever-hoover-538d35.netlify.com/{{ .Params.image }}">
-                            </picture>
-                        </div>
+                    </div>
+                    <div class="col-xs-1 pull-right">
+                        <div class="share-area hidden-print">
+                            <div class="widget controller" data-controller="master/fragments/recipes/Share">
+                                <button class="btn-circle btn-raised btn-toggle">
+                                    <svg>
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-share"></use>
+                                    </svg>
+                                </button>
+                                <ul class="list-unstyled channel-list">
+                                    <li class="channel facebook">
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flb.prod.rewe-digital.com%2Frezepte%2F&amp;t=REWE%20Rezepte"
+                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;"
+                                           rel="nofollow" class="btn-circle btn-raised" target="_blank"
+                                           title="Facebook">
+                                            <svg>
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-facebook-logo"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
 
-                        <div class="recipe-info">
-                            <p class="recipe-title font-style-body ">{{ .Title }}</p>
-                            <div class="recipe-meta">
-                                <div class="meta-time">
-                                    <svg>
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xlink:href="#inline-icon-clock"></use>
-                                    </svg>
-                                    <span class="font-style-caption">60 min</span>
-                                </div>
-                                <div class="meta-level font-style-caption">
-                                <span class="spoon active">
-                                    <svg>
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xlink:href="#inline-icon-spoon-rdkv2"></use>
-                                    </svg>
-                                </span>
-                                    <span class="spoon active">
-                                    <svg>
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xlink:href="#inline-icon-spoon-rdkv2"></use>
-                                    </svg>
-                                </span>
-                                    <span class="spoon">
-                                    <svg>
-                                        <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                             xlink:href="#inline-icon-spoon-rdkv2"></use>
-                                    </svg>
-                                </span>
-                                    <span class="font-style-caption">Mittel</span>
-                                </div>
+                                    <li class="channel twitter">
+                                        <a href="https://twitter.com/share?url=http%3A%2F%2Flb.prod.rewe-digital.com%2Frezepte%2F&amp;via=REWE_Supermarkt&amp;text=REWE%20Rezepte"
+                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;"
+                                           class="btn-circle btn-raised" rel="nofollow" target="_blank" title="Twitter">
+                                            <svg>
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-twitter"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+                                    <li class="channel google">
+                                        <a href="https://plus.google.com/share?url=http%3A%2F%2Flb.prod.rewe-digital.com%2Frezepte%2F"
+                                           onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;"
+                                           class="btn-circle btn-raised" rel="nofollow" target="_blank" title="Google+">
+                                            <svg>
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="#inline-icon-google-plus"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+
+                                    <li class="visible-xs-inline-block channel whatsapp">
+                                        <a href="whatsapp://send?text=http%3A%2F%2Flb.prod.rewe-digital.com%2Frezepte%2F"
+                                           data-action="share/whatsapp/share" class="btn-circle btn-raised"
+                                           rel="nofollow" title="WhatsApp">
+                                            <svg>
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="#inline-icon-whatsapp-simple"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+
+
+                                    <li class="channel mail">
+                                        <a href="mailto:?subject=Leckeres%20in%20der%20Rezeptwelt%20von%20REWE%20entdecken&amp;body=REWE%20Rezepte:%20http%3A%2F%2Flb.prod.rewe-digital.com%2Frezepte%2F"
+                                           title="Mail" rel="nofollow" class="btn-circle btn-raised">
+                                            <svg>
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="#inline-icon-e-mail-envelope"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
-                    </a>
-
-                    <div class="rdk-recipe-favor">
-                        <div class="favor-label-wrapper" data-favor="">
-                            <svg class="favor-ribbon">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     xlink:href="#inline-icon-rdk-ribbon"></use>
-                            </svg>
-
-                            <svg class="favor-state favored">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     xlink:href="#inline-icon-rdk-favored"></use>
-                            </svg>
-
-                            <svg class="favor-state unfavored ">
-                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                                     xlink:href="#inline-icon-rdk-unfavored"></use>
-                            </svg>
-                        </div>
-                        <div class="arrow-box position-right ">
-                            In <a href="https://www.rewe.de/meine-rezepte/" data-favorites-link="">Meine Rezepte</a>
-                            gespeichert
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        {{ end }}
-    </ul>
+    </div>
+
+    <section class="recipe-overview">
+        <div class="recipe-search-settings controller font-style-body  "
+             data-controller="master/fragments/recipes/LoadRecipesView" data-ajax="/restservices/recipe/search"
+             data-search-string="" data-search-page-number="1" data-search-total-pages="90" data-search-page-size="36"
+             data-overview-url="https://www.rewe.de/rezepte" data-is-sub-site="false">
+
+            <form id="recipe-search-form" class="recipe-search controller"
+                  data-controller="master/fragments/recipes/FilterRecipesView" data-context="{
+    &quot;recipeSearchURL&quot;: &quot;https://www.rewe.de/rezepte&quot;,
+    &quot;hasActiveTags&quot;: &quot;false&quot;,
+    &quot;tags&quot;: [
+  {
+    &quot;children&quot;: [
+      {
+        &quot;identifier&quot;: &quot;a52ad593-1764-4d5c-8212-ba1386edfddc&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Menuepunkt/Fruehstueck&quot;,
+        &quot;displayName&quot;: &quot;Frühstück&quot;,
+        &quot;name&quot;: &quot;Fruehstueck&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;07b7c21e-faa5-4936-9610-dff394a15600&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Menuepunkt/Vorspeise&quot;,
+        &quot;displayName&quot;: &quot;Vorspeise&quot;,
+        &quot;name&quot;: &quot;Vorspeise&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;163f711d-68c7-4388-ada8-c6dde08f5113&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Menuepunkt/Hauptspeise&quot;,
+        &quot;displayName&quot;: &quot;Hauptspeise&quot;,
+        &quot;name&quot;: &quot;Hauptspeise&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;6406fcb7-4da4-4071-90a0-d9f720746878&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Menuepunkt/Dessert&quot;,
+        &quot;displayName&quot;: &quot;Dessert&quot;,
+        &quot;name&quot;: &quot;Dessert&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;306f23f4-30ca-410e-a356-bd0055dcb183&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Menuepunkt/Abendessen&quot;,
+        &quot;displayName&quot;: &quot;Abendessen&quot;,
+        &quot;name&quot;: &quot;Abendessen&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;12800474-1f90-4a93-9e34-1d1e225c40d7&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Menuepunkt/Snacks&quot;,
+        &quot;displayName&quot;: &quot;Snacks&quot;,
+        &quot;name&quot;: &quot;Snacks&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;796ab671-1e28-4256-9e9c-62d488dfb922&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Menuepunkt/Getraenke&quot;,
+        &quot;displayName&quot;: &quot;Getränke&quot;,
+        &quot;name&quot;: &quot;Getraenke&quot;
+      }
+    ],
+    &quot;identifier&quot;: &quot;aefbcb1c-6fd8-4b3a-8426-74b9c96764ce&quot;,
+    &quot;path&quot;: &quot;/recipes/tags/Menuepunkt&quot;,
+    &quot;displayName&quot;: &quot;Menüpunkt&quot;,
+    &quot;name&quot;: &quot;Menuepunkt&quot;
+  },
+  {
+    &quot;children&quot;: [
+      {
+        &quot;identifier&quot;: &quot;b353f87f-1d60-493f-83ca-a6a779e7e303&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Kochen/Nudeln-Pasta&quot;,
+        &quot;displayName&quot;: &quot;Nudeln/Pasta&quot;,
+        &quot;name&quot;: &quot;Nudeln-Pasta&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;2fe31559-793a-4e1b-852f-ede7c5c31aa0&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Kochen/Salate&quot;,
+        &quot;displayName&quot;: &quot;Salate&quot;,
+        &quot;name&quot;: &quot;Salate&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;8d9a87bd-01d5-4455-b5ae-33c672e51757&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Kochen/Suppen&quot;,
+        &quot;displayName&quot;: &quot;Suppen&quot;,
+        &quot;name&quot;: &quot;Suppen&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;9405676d-7d19-4381-b157-dc685e9b1279&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Kochen/Kartoffeln&quot;,
+        &quot;displayName&quot;: &quot;Kartoffeln&quot;,
+        &quot;name&quot;: &quot;Kartoffeln&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;d43785f0-0fd4-4494-84ac-d5411bf4e052&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Kochen/Fleisch&quot;,
+        &quot;displayName&quot;: &quot;Fleisch&quot;,
+        &quot;name&quot;: &quot;Fleisch&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;3a782222-1f7f-45af-baf0-ee0b5146a58d&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Kochen/Fisch&quot;,
+        &quot;displayName&quot;: &quot;Fisch&quot;,
+        &quot;name&quot;: &quot;Fisch&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;db7ac617-8174-4a0d-b2d7-5fe6245ff653&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Kochen/Lasagne&quot;,
+        &quot;displayName&quot;: &quot;Lasagne&quot;,
+        &quot;name&quot;: &quot;Lasagne&quot;
+      }
+    ],
+    &quot;identifier&quot;: &quot;7f8b24ad-468f-42b6-9cc8-07278f53bbc2&quot;,
+    &quot;path&quot;: &quot;/recipes/tags/Kochen&quot;,
+    &quot;displayName&quot;: &quot;Kochen&quot;,
+    &quot;name&quot;: &quot;Kochen&quot;
+  },
+  {
+    &quot;children&quot;: [
+      {
+        &quot;identifier&quot;: &quot;07c2dfe4-128d-405f-b18d-2fdea458416e&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Backen/Kuchen&quot;,
+        &quot;displayName&quot;: &quot;Kuchen&quot;,
+        &quot;name&quot;: &quot;Kuchen&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;22f88d59-fdc9-4bb8-9931-e05b30f5d8f7&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Backen/Torten&quot;,
+        &quot;displayName&quot;: &quot;Torten&quot;,
+        &quot;name&quot;: &quot;Torten&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;764326e5-fa2a-4f7e-a694-0f83d5612040&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Backen/Plaetzchen-Kekse&quot;,
+        &quot;displayName&quot;: &quot;Plätzchen/Kekse &quot;,
+        &quot;name&quot;: &quot;Plaetzchen-Kekse&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;5aa1f62f-df54-4f60-b58f-70b749b361c9&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Backen/Muffins-Cupcakes&quot;,
+        &quot;displayName&quot;: &quot;Muffins/Cupcakes&quot;,
+        &quot;name&quot;: &quot;Muffins-Cupcakes&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;4310b0ce-d7eb-46bf-a7bb-9f78f27fbced&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Backen/Pfannkuchen&quot;,
+        &quot;displayName&quot;: &quot;Pfannkuchen&quot;,
+        &quot;name&quot;: &quot;Pfannkuchen&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;174d083c-69da-4605-9385-db9318c11b41&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Backen/Waffeln&quot;,
+        &quot;displayName&quot;: &quot;Waffeln&quot;,
+        &quot;name&quot;: &quot;Waffeln&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;c2d4da33-f10c-4580-95e1-2273729536ec&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Backen/Kuchenfee&quot;,
+        &quot;displayName&quot;: &quot;Kuchenfee&quot;,
+        &quot;name&quot;: &quot;Kuchenfee&quot;
+      }
+    ],
+    &quot;identifier&quot;: &quot;0859d2a9-b9ee-4d50-bedd-8dc824907404&quot;,
+    &quot;path&quot;: &quot;/recipes/tags/Backen&quot;,
+    &quot;displayName&quot;: &quot;Backen&quot;,
+    &quot;name&quot;: &quot;Backen&quot;
+  },
+  {
+    &quot;children&quot;: [
+      {
+        &quot;identifier&quot;: &quot;1fb866e6-1f7a-4e5c-ae00-0db81d6ba59b&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Saison/Fruehling&quot;,
+        &quot;displayName&quot;: &quot;Frühling&quot;,
+        &quot;name&quot;: &quot;Fruehling&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;ce3c1855-c979-4e51-b424-a3faee7a0d7c&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Saison/Karneval&quot;,
+        &quot;displayName&quot;: &quot;Karneval&quot;,
+        &quot;name&quot;: &quot;Karneval&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;ccb0bf12-09cd-4e09-bd5d-564880fe4026&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Saison/Kindergeburtstag&quot;,
+        &quot;displayName&quot;: &quot;Kindergeburtstag&quot;,
+        &quot;name&quot;: &quot;Kindergeburtstag&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;5baf068c-ca19-440c-8d31-8031c316c8aa&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Saison/Ostern&quot;,
+        &quot;displayName&quot;: &quot;Ostern&quot;,
+        &quot;name&quot;: &quot;Ostern&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;e18255d1-d75c-4f47-bc87-9694ec6c0047&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Saison/Party&quot;,
+        &quot;displayName&quot;: &quot;Party&quot;,
+        &quot;name&quot;: &quot;Party&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;1b4496bf-c7a3-46af-9281-fe2d351899f6&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Saison/Trends&quot;,
+        &quot;displayName&quot;: &quot;Trends&quot;,
+        &quot;name&quot;: &quot;Trends&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;5c753554-9fa7-42e3-983e-ef0cd9d22938&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Saison/Winter&quot;,
+        &quot;displayName&quot;: &quot;Winter&quot;,
+        &quot;name&quot;: &quot;Winter&quot;
+      }
+    ],
+    &quot;identifier&quot;: &quot;d6a505b8-53db-4158-aa6b-e1d6bdbb2bc5&quot;,
+    &quot;path&quot;: &quot;/recipes/tags/Saison&quot;,
+    &quot;displayName&quot;: &quot;Saison&quot;,
+    &quot;name&quot;: &quot;Saison&quot;
+  },
+  {
+    &quot;children&quot;: [
+      {
+        &quot;identifier&quot;: &quot;ab30b086-dc6b-463f-9926-28ed315b5231&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Ernaehrungsform/Vegan&quot;,
+        &quot;displayName&quot;: &quot;Vegan&quot;,
+        &quot;name&quot;: &quot;Vegan&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;602a9df8-bcda-426d-9679-6a84cf9eef97&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Ernaehrungsform/Vegetarisch&quot;,
+        &quot;displayName&quot;: &quot;Vegetarisch&quot;,
+        &quot;name&quot;: &quot;Vegetarisch&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;96baac00-47c7-4043-a46c-022d563e7d22&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Ernaehrungsform/Low-Carb&quot;,
+        &quot;displayName&quot;: &quot;Low Carb&quot;,
+        &quot;name&quot;: &quot;Low-Carb&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;65ce51a9-e2ab-4d2f-ab8c-4fba94a5eba3&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Ernaehrungsform/Paleo&quot;,
+        &quot;displayName&quot;: &quot;Paleo&quot;,
+        &quot;name&quot;: &quot;Paleo&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;21f0c329-8d4a-42a5-911b-c9c24cbd0829&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Ernaehrungsform/Diaet&quot;,
+        &quot;displayName&quot;: &quot;Diät&quot;,
+        &quot;name&quot;: &quot;Diaet&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;7385fd8d-be04-4f10-9504-b82aa18fedbc&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Ernaehrungsform/Glutenfrei&quot;,
+        &quot;displayName&quot;: &quot;Glutenfrei&quot;,
+        &quot;name&quot;: &quot;Glutenfrei&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;dec51e18-bdc5-46b7-a478-e958d9b3fd2c&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Ernaehrungsform/Laktosefrei&quot;,
+        &quot;displayName&quot;: &quot;Laktosefrei&quot;,
+        &quot;name&quot;: &quot;Laktosefrei&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;8a8647e1-ba73-428c-bf57-8fe1e7dcd07d&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/Ernaehrungsform/Wenig-Zucker&quot;,
+        &quot;displayName&quot;: &quot;Wenig Zucker&quot;,
+        &quot;name&quot;: &quot;Wenig-Zucker&quot;
+      }
+    ],
+    &quot;identifier&quot;: &quot;b9c5a8b9-9fde-4f19-a82e-61a1992ebdd5&quot;,
+    &quot;path&quot;: &quot;/recipes/tags/Ernaehrungsform&quot;,
+    &quot;displayName&quot;: &quot;Ernährungsform&quot;,
+    &quot;name&quot;: &quot;Ernaehrungsform&quot;
+  },
+  {
+    &quot;children&quot;: [
+      {
+        &quot;identifier&quot;: &quot;e141713f-7dba-4085-af1d-52ad544cda41&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/aufwand/leicht&quot;,
+        &quot;displayName&quot;: &quot;Geringer Aufwand&quot;,
+        &quot;name&quot;: &quot;leicht&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;d68b39a3-db7b-4242-8b28-09b02808fb79&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/aufwand/mittel&quot;,
+        &quot;displayName&quot;: &quot;Mittlerer Aufwand&quot;,
+        &quot;name&quot;: &quot;mittel&quot;
+      },
+      {
+        &quot;identifier&quot;: &quot;41e3bcd4-7b2f-405f-8bea-9322e38a6eb0&quot;,
+        &quot;path&quot;: &quot;/recipes/tags/aufwand/schwer&quot;,
+        &quot;displayName&quot;: &quot;Hoher Aufwand&quot;,
+        &quot;name&quot;: &quot;schwer&quot;
+      }
+    ],
+    &quot;identifier&quot;: &quot;f535f87a-7ab2-4d18-9b8b-5761a540b888&quot;,
+    &quot;path&quot;: &quot;/recipes/tags/aufwand&quot;,
+    &quot;displayName&quot;: &quot;Aufwand&quot;,
+    &quot;name&quot;: &quot;aufwand&quot;
+  }
+],
+    &quot;tagHits&quot;: {
+  &quot;764326e5-fa2a-4f7e-a694-0f83d5612040&quot;: true,
+  &quot;8c5044f5-040b-46de-974a-ba7803ff6c76&quot;: true,
+  &quot;6406fcb7-4da4-4071-90a0-d9f720746878&quot;: true,
+  &quot;5c753554-9fa7-42e3-983e-ef0cd9d22938&quot;: true,
+  &quot;4067878f-6ddd-4e97-9c10-2b4722c0cbb8&quot;: true,
+  &quot;5aa1f62f-df54-4f60-b58f-70b749b361c9&quot;: true,
+  &quot;12800474-1f90-4a93-9e34-1d1e225c40d7&quot;: true,
+  &quot;163f711d-68c7-4388-ada8-c6dde08f5113&quot;: true,
+  &quot;22f88d59-fdc9-4bb8-9931-e05b30f5d8f7&quot;: true,
+  &quot;2f3a7d69-1614-415a-b1c2-317a3f27c11d&quot;: true,
+  &quot;602a9df8-bcda-426d-9679-6a84cf9eef97&quot;: true,
+  &quot;ccb0bf12-09cd-4e09-bd5d-564880fe4026&quot;: true,
+  &quot;d3d747d0-b3fe-40ad-80cb-e22321d70304&quot;: true,
+  &quot;a52ad593-1764-4d5c-8212-ba1386edfddc&quot;: true,
+  &quot;1fb866e6-1f7a-4e5c-ae00-0db81d6ba59b&quot;: true,
+  &quot;1b4496bf-c7a3-46af-9281-fe2d351899f6&quot;: true,
+  &quot;65ce51a9-e2ab-4d2f-ab8c-4fba94a5eba3&quot;: true,
+  &quot;21f0c329-8d4a-42a5-911b-c9c24cbd0829&quot;: true,
+  &quot;db7ac617-8174-4a0d-b2d7-5fe6245ff653&quot;: true,
+  &quot;08c0524f-8250-4c26-aed6-aadbf4332f0b&quot;: true,
+  &quot;e18255d1-d75c-4f47-bc87-9694ec6c0047&quot;: true,
+  &quot;8a8647e1-ba73-428c-bf57-8fe1e7dcd07d&quot;: true,
+  &quot;c0f0fdc5-1412-471f-a4bb-59ec7e93c2ee&quot;: true,
+  &quot;80b12341-e397-495c-8854-eadc43b48445&quot;: true,
+  &quot;7385fd8d-be04-4f10-9504-b82aa18fedbc&quot;: true,
+  &quot;ce3c1855-c979-4e51-b424-a3faee7a0d7c&quot;: true,
+  &quot;07b7c21e-faa5-4936-9610-dff394a15600&quot;: true,
+  &quot;174d083c-69da-4605-9385-db9318c11b41&quot;: true,
+  &quot;306f23f4-30ca-410e-a356-bd0055dcb183&quot;: true,
+  &quot;c2d4da33-f10c-4580-95e1-2273729536ec&quot;: true,
+  &quot;d68b39a3-db7b-4242-8b28-09b02808fb79&quot;: true,
+  &quot;2fe31559-793a-4e1b-852f-ede7c5c31aa0&quot;: true,
+  &quot;d43785f0-0fd4-4494-84ac-d5411bf4e052&quot;: true,
+  &quot;796ab671-1e28-4256-9e9c-62d488dfb922&quot;: true,
+  &quot;7d74100e-351c-451b-a343-bf7fd8c5f90b&quot;: true,
+  &quot;ab30b086-dc6b-463f-9926-28ed315b5231&quot;: true,
+  &quot;4310b0ce-d7eb-46bf-a7bb-9f78f27fbced&quot;: true,
+  &quot;e141713f-7dba-4085-af1d-52ad544cda41&quot;: true,
+  &quot;b353f87f-1d60-493f-83ca-a6a779e7e303&quot;: true,
+  &quot;07c2dfe4-128d-405f-b18d-2fdea458416e&quot;: true,
+  &quot;06f76166-6c81-4a98-b30b-4c109bf9b65b&quot;: true,
+  &quot;5baf068c-ca19-440c-8d31-8031c316c8aa&quot;: true,
+  &quot;96baac00-47c7-4043-a46c-022d563e7d22&quot;: true,
+  &quot;8d9a87bd-01d5-4455-b5ae-33c672e51757&quot;: true,
+  &quot;3a782222-1f7f-45af-baf0-ee0b5146a58d&quot;: true,
+  &quot;41e3bcd4-7b2f-405f-8bea-9322e38a6eb0&quot;: true,
+  &quot;9405676d-7d19-4381-b157-dc685e9b1279&quot;: true,
+  &quot;7323e6f3-c368-4024-987f-393f4878d324&quot;: true,
+  &quot;dec51e18-bdc5-46b7-a478-e958d9b3fd2c&quot;: true
+},
+    &quot;activeTags&quot;: null
+    }" action="">
+                <div class="recipe-search-tools">
+                    <div class="recipe-search-container">
+                        <div class="container">
+                            <div class="row text-center">
+                                <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                                    <div class="search-input controller" data-controller="master/fragments/ClearInput">
+                                        <input type="text" id="search-input" name="searchString"
+                                               class="form-control font-style-body clear-input is-empty"
+                                               placeholder="Rezepte &amp; Zutaten suchen..." value="">
+
+                                        <div class="clear">
+                                            <svg>
+                                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                     xlink:href="#inline-icon-close"></use>
+                                            </svg>
+                                        </div>
+                                        <button class="btn btn-color" type="submit">
+                                        <span class="label">
+                                            <span class="rs-glyphiconext rs-glyphiconext-magnifier"></span>
+                                        </span>
+                                        </button>
+                                        <div class="border"></div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="container recipe-filter-container margin-top-half " data-recipe-filter-tags="">
+
+
+                        <!--DESKTOP-->
+                        <div class="row half-gutter hidden-xs hidden-sm">
+
+
+                            <div class="col-md-2">
+                                <div class="dropdown dropdown-desktop">
+                                    <div id="Menuepunkt" class="dropdown-button  " type="button">
+                        <span class="button-label">
+                            Menüpunkt
+                            <svg class="indicator">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                            </svg>
+                        </span>
+                                    </div>
+                                    <div class="dropdown-content search-categories ">
+
+
+                                        <a href="https://www.rewe.de/rezepte/Fruehstueck/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="0" data-index="0"
+                                                 data-tag-name="Fruehstueck" data-tag-display-name="Frühstück"
+                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Frühstück
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Vorspeise/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="0" data-index="1"
+                                                 data-tag-name="Vorspeise" data-tag-display-name="Vorspeise"
+                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Vorspeise
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Hauptspeise/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="0" data-index="2"
+                                                 data-tag-name="Hauptspeise" data-tag-display-name="Hauptspeise"
+                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Hauptspeise
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Dessert/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="0" data-index="3"
+                                                 data-tag-name="Dessert" data-tag-display-name="Dessert"
+                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Dessert
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Abendessen/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="0" data-index="4"
+                                                 data-tag-name="Abendessen" data-tag-display-name="Abendessen"
+                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Abendessen
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Snacks/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="0" data-index="5"
+                                                 data-tag-name="Snacks" data-tag-display-name="Snacks"
+                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Snacks
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Getraenke/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="0" data-index="6"
+                                                 data-tag-name="Getraenke" data-tag-display-name="Getränke"
+                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Getränke
+
+                                            </div>
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <div class="dropdown dropdown-desktop">
+                                    <div id="Kochen" class="dropdown-button  " type="button">
+                        <span class="button-label">
+                            Kochen
+                            <svg class="indicator">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                            </svg>
+                        </span>
+                                    </div>
+                                    <div class="dropdown-content search-categories ">
+
+
+                                        <a href="https://www.rewe.de/rezepte/Nudeln-Pasta/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="1" data-index="0"
+                                                 data-tag-name="Nudeln-Pasta" data-tag-display-name="Nudeln/Pasta"
+                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Nudeln/Pasta
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Salate/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="1" data-index="1"
+                                                 data-tag-name="Salate" data-tag-display-name="Salate"
+                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Salate
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Suppen/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="1" data-index="2"
+                                                 data-tag-name="Suppen" data-tag-display-name="Suppen"
+                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Suppen
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Kartoffeln/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="1" data-index="3"
+                                                 data-tag-name="Kartoffeln" data-tag-display-name="Kartoffeln"
+                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Kartoffeln
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Fleisch/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="1" data-index="4"
+                                                 data-tag-name="Fleisch" data-tag-display-name="Fleisch"
+                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Fleisch
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Fisch/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="1" data-index="5"
+                                                 data-tag-name="Fisch" data-tag-display-name="Fisch"
+                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Fisch
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Lasagne/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="1" data-index="6"
+                                                 data-tag-name="Lasagne" data-tag-display-name="Lasagne"
+                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Lasagne
+
+                                            </div>
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <div class="dropdown dropdown-desktop">
+                                    <div id="Backen" class="dropdown-button  " type="button">
+                        <span class="button-label">
+                            Backen
+                            <svg class="indicator">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                            </svg>
+                        </span>
+                                    </div>
+                                    <div class="dropdown-content search-categories ">
+
+
+                                        <a href="https://www.rewe.de/rezepte/Kuchen/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="2" data-index="0"
+                                                 data-tag-name="Kuchen" data-tag-display-name="Kuchen"
+                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Kuchen
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Torten/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="2" data-index="1"
+                                                 data-tag-name="Torten" data-tag-display-name="Torten"
+                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Torten
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Plaetzchen-Kekse/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="2" data-index="2"
+                                                 data-tag-name="Plaetzchen-Kekse"
+                                                 data-tag-display-name="Plätzchen/Kekse "
+                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Plätzchen/Kekse
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Muffins-Cupcakes/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="2" data-index="3"
+                                                 data-tag-name="Muffins-Cupcakes"
+                                                 data-tag-display-name="Muffins/Cupcakes"
+                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Muffins/Cupcakes
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Pfannkuchen/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="2" data-index="4"
+                                                 data-tag-name="Pfannkuchen" data-tag-display-name="Pfannkuchen"
+                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Pfannkuchen
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Waffeln/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="2" data-index="5"
+                                                 data-tag-name="Waffeln" data-tag-display-name="Waffeln"
+                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Waffeln
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Kuchenfee/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="2" data-index="6"
+                                                 data-tag-name="Kuchenfee" data-tag-display-name="Kuchenfee"
+                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Kuchenfee
+
+                                            </div>
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <div class="dropdown dropdown-desktop">
+                                    <div id="Saison" class="dropdown-button  " type="button">
+                        <span class="button-label">
+                            Saison
+                            <svg class="indicator">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                            </svg>
+                        </span>
+                                    </div>
+                                    <div class="dropdown-content search-categories ">
+
+
+                                        <a href="https://www.rewe.de/rezepte/Fruehling/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="3" data-index="0"
+                                                 data-tag-name="Fruehling" data-tag-display-name="Frühling"
+                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Frühling
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Karneval/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="3" data-index="1"
+                                                 data-tag-name="Karneval" data-tag-display-name="Karneval"
+                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Karneval
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Kindergeburtstag/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="3" data-index="2"
+                                                 data-tag-name="Kindergeburtstag"
+                                                 data-tag-display-name="Kindergeburtstag"
+                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Kindergeburtstag
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Ostern/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="3" data-index="3"
+                                                 data-tag-name="Ostern" data-tag-display-name="Ostern"
+                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Ostern
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Party/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="3" data-index="4"
+                                                 data-tag-name="Party" data-tag-display-name="Party"
+                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Party
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Trends/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="3" data-index="5"
+                                                 data-tag-name="Trends" data-tag-display-name="Trends"
+                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Trends
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Winter/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="3" data-index="6"
+                                                 data-tag-name="Winter" data-tag-display-name="Winter"
+                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Winter
+
+                                            </div>
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <div class="dropdown dropdown-desktop">
+                                    <div id="Ernaehrungsform" class="dropdown-button  " type="button">
+                        <span class="button-label">
+                            Ernährungsform
+                            <svg class="indicator">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                            </svg>
+                        </span>
+                                    </div>
+                                    <div class="dropdown-content search-categories ">
+
+
+                                        <a href="https://www.rewe.de/rezepte/Vegan/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="4" data-index="0"
+                                                 data-tag-name="Vegan" data-tag-display-name="Vegan"
+                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Vegan
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Vegetarisch/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="4" data-index="1"
+                                                 data-tag-name="Vegetarisch" data-tag-display-name="Vegetarisch"
+                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Vegetarisch
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Low-Carb/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="4" data-index="2"
+                                                 data-tag-name="Low-Carb" data-tag-display-name="Low Carb"
+                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Low Carb
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Paleo/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="4" data-index="3"
+                                                 data-tag-name="Paleo" data-tag-display-name="Paleo"
+                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Paleo
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Diaet/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="4" data-index="4"
+                                                 data-tag-name="Diaet" data-tag-display-name="Diät"
+                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Diät
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Glutenfrei/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="4" data-index="5"
+                                                 data-tag-name="Glutenfrei" data-tag-display-name="Glutenfrei"
+                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Glutenfrei
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Laktosefrei/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="4" data-index="6"
+                                                 data-tag-name="Laktosefrei" data-tag-display-name="Laktosefrei"
+                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Laktosefrei
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/Wenig-Zucker/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="4" data-index="7"
+                                                 data-tag-name="Wenig-Zucker" data-tag-display-name="Wenig Zucker"
+                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Wenig Zucker
+
+                                            </div>
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-2">
+                                <div class="dropdown dropdown-desktop">
+                                    <div id="aufwand" class="dropdown-button  " type="button">
+                        <span class="button-label">
+                            Aufwand
+                            <svg class="indicator">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                            </svg>
+                        </span>
+                                    </div>
+                                    <div class="dropdown-content search-categories attach-right">
+
+
+                                        <a href="https://www.rewe.de/rezepte/leicht/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="5" data-index="0"
+                                                 data-tag-name="leicht" data-tag-display-name="Geringer Aufwand"
+                                                 data-root-tag-identifier="aufwand">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Geringer Aufwand
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/mittel/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="5" data-index="1"
+                                                 data-tag-name="mittel" data-tag-display-name="Mittlerer Aufwand"
+                                                 data-root-tag-identifier="aufwand">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Mittlerer Aufwand
+
+                                            </div>
+                                        </a>
+
+
+                                        <a href="https://www.rewe.de/rezepte/schwer/" class="dropdown-link">
+                                            <div class="category-item  dropdown-item" data-root-index="5" data-index="2"
+                                                 data-tag-name="schwer" data-tag-display-name="Hoher Aufwand"
+                                                 data-root-tag-identifier="aufwand">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                Hoher Aufwand
+
+                                            </div>
+                                        </a>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <!--MOBILE-->
+                        <div class="row half-gutter">
+                            <div class="col-xxs-12 col-xxs-offset-0 col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3">
+                                <div class="dropdown dropdown-mobile ">
+
+                                    <div class="dropdown-button category-button visible-xs-block visible-sm-block "
+                                         data-recipe-filter-mobile-dropdown-button="" type="button">
+                        <span class="button-label">
+                            Rezepte filtern
+                            <svg class="indicator">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                            </svg>
+                        </span>
+
+                                        <a class="layer-button controller" data-target="#tagsModal"
+                                           data-controller="t8y/layer/controls/Button"></a>
+                                    </div>
+
+                                    <!--MODAL-->
+                                    <div class="modal no-chrome controller " data-controller="master/fragments/Modal"
+                                         id="tagsModal" data-fragment="modal" data-mobile-tags-modal="">
+
+                                        <section data-element="content-container" class="container">
+
+                                            <div class="header close-button" data-element="close">
+                                                Auswahl verfeinern
+                                                <svg class="pull-right">
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                         xlink:href="#inline-icon-close"></use>
+                                                </svg>
+                                            </div>
+
+                                            <div class="dropdown-content-mobile search-categories"
+                                                 data-recipe-filter-mobile-dropdown-tags="">
+
+
+                                                <div class="row half-gutter">
+
+                                                    <div class="col-xs-12 margin-top-1">
+                                                        <span class="category-headline">Menüpunkt</span>
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Fruehstueck/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="0"
+                                                                 data-index="0" data-tag-name="Fruehstueck"
+                                                                 data-tag-display-name="Frühstück"
+                                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Frühstück
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Vorspeise/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="0"
+                                                                 data-index="1" data-tag-name="Vorspeise"
+                                                                 data-tag-display-name="Vorspeise"
+                                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Vorspeise
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Hauptspeise/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="0"
+                                                                 data-index="2" data-tag-name="Hauptspeise"
+                                                                 data-tag-display-name="Hauptspeise"
+                                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Hauptspeise
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Dessert/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="0"
+                                                                 data-index="3" data-tag-name="Dessert"
+                                                                 data-tag-display-name="Dessert"
+                                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Dessert
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Abendessen/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="0"
+                                                                 data-index="4" data-tag-name="Abendessen"
+                                                                 data-tag-display-name="Abendessen"
+                                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Abendessen
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Snacks/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="0"
+                                                                 data-index="5" data-tag-name="Snacks"
+                                                                 data-tag-display-name="Snacks"
+                                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Snacks
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Getraenke/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="0"
+                                                                 data-index="6" data-tag-name="Getraenke"
+                                                                 data-tag-display-name="Getränke"
+                                                                 data-root-tag-identifier="Menuepunkt">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Getränke
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                <div class="row half-gutter">
+
+                                                    <div class="col-xs-12 margin-top-1">
+                                                        <span class="category-headline">Kochen</span>
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Nudeln-Pasta/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="1"
+                                                                 data-index="0" data-tag-name="Nudeln-Pasta"
+                                                                 data-tag-display-name="Nudeln/Pasta"
+                                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Nudeln/Pasta
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Salate/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="1"
+                                                                 data-index="1" data-tag-name="Salate"
+                                                                 data-tag-display-name="Salate"
+                                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Salate
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Suppen/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="1"
+                                                                 data-index="2" data-tag-name="Suppen"
+                                                                 data-tag-display-name="Suppen"
+                                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Suppen
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Kartoffeln/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="1"
+                                                                 data-index="3" data-tag-name="Kartoffeln"
+                                                                 data-tag-display-name="Kartoffeln"
+                                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Kartoffeln
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Fleisch/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="1"
+                                                                 data-index="4" data-tag-name="Fleisch"
+                                                                 data-tag-display-name="Fleisch"
+                                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Fleisch
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Fisch/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="1"
+                                                                 data-index="5" data-tag-name="Fisch"
+                                                                 data-tag-display-name="Fisch"
+                                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Fisch
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Lasagne/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="1"
+                                                                 data-index="6" data-tag-name="Lasagne"
+                                                                 data-tag-display-name="Lasagne"
+                                                                 data-root-tag-identifier="Kochen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Lasagne
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                <div class="row half-gutter">
+
+                                                    <div class="col-xs-12 margin-top-1">
+                                                        <span class="category-headline">Backen</span>
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Kuchen/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="2"
+                                                                 data-index="0" data-tag-name="Kuchen"
+                                                                 data-tag-display-name="Kuchen"
+                                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Kuchen
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Torten/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="2"
+                                                                 data-index="1" data-tag-name="Torten"
+                                                                 data-tag-display-name="Torten"
+                                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Torten
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Plaetzchen-Kekse/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="2"
+                                                                 data-index="2" data-tag-name="Plaetzchen-Kekse"
+                                                                 data-tag-display-name="Plätzchen/Kekse "
+                                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Plätzchen/Kekse
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Muffins-Cupcakes/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="2"
+                                                                 data-index="3" data-tag-name="Muffins-Cupcakes"
+                                                                 data-tag-display-name="Muffins/Cupcakes"
+                                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Muffins/Cupcakes
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Pfannkuchen/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="2"
+                                                                 data-index="4" data-tag-name="Pfannkuchen"
+                                                                 data-tag-display-name="Pfannkuchen"
+                                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Pfannkuchen
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Waffeln/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="2"
+                                                                 data-index="5" data-tag-name="Waffeln"
+                                                                 data-tag-display-name="Waffeln"
+                                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Waffeln
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Kuchenfee/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="2"
+                                                                 data-index="6" data-tag-name="Kuchenfee"
+                                                                 data-tag-display-name="Kuchenfee"
+                                                                 data-root-tag-identifier="Backen">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Kuchenfee
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                <div class="row half-gutter">
+
+                                                    <div class="col-xs-12 margin-top-1">
+                                                        <span class="category-headline">Saison</span>
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Fruehling/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="3"
+                                                                 data-index="0" data-tag-name="Fruehling"
+                                                                 data-tag-display-name="Frühling"
+                                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Frühling
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Karneval/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="3"
+                                                                 data-index="1" data-tag-name="Karneval"
+                                                                 data-tag-display-name="Karneval"
+                                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Karneval
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Kindergeburtstag/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="3"
+                                                                 data-index="2" data-tag-name="Kindergeburtstag"
+                                                                 data-tag-display-name="Kindergeburtstag"
+                                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Kindergeburtstag
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Ostern/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="3"
+                                                                 data-index="3" data-tag-name="Ostern"
+                                                                 data-tag-display-name="Ostern"
+                                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Ostern
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Party/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="3"
+                                                                 data-index="4" data-tag-name="Party"
+                                                                 data-tag-display-name="Party"
+                                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Party
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Trends/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="3"
+                                                                 data-index="5" data-tag-name="Trends"
+                                                                 data-tag-display-name="Trends"
+                                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Trends
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Winter/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="3"
+                                                                 data-index="6" data-tag-name="Winter"
+                                                                 data-tag-display-name="Winter"
+                                                                 data-root-tag-identifier="Saison">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Winter
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                <div class="row half-gutter">
+
+                                                    <div class="col-xs-12 margin-top-1">
+                                                        <span class="category-headline">Ernährungsform</span>
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Vegan/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="4"
+                                                                 data-index="0" data-tag-name="Vegan"
+                                                                 data-tag-display-name="Vegan"
+                                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Vegan
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Vegetarisch/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="4"
+                                                                 data-index="1" data-tag-name="Vegetarisch"
+                                                                 data-tag-display-name="Vegetarisch"
+                                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Vegetarisch
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Low-Carb/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="4"
+                                                                 data-index="2" data-tag-name="Low-Carb"
+                                                                 data-tag-display-name="Low Carb"
+                                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Low Carb
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Paleo/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="4"
+                                                                 data-index="3" data-tag-name="Paleo"
+                                                                 data-tag-display-name="Paleo"
+                                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Paleo
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Diaet/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="4"
+                                                                 data-index="4" data-tag-name="Diaet"
+                                                                 data-tag-display-name="Diät"
+                                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Diät
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Glutenfrei/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="4"
+                                                                 data-index="5" data-tag-name="Glutenfrei"
+                                                                 data-tag-display-name="Glutenfrei"
+                                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Glutenfrei
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Laktosefrei/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="4"
+                                                                 data-index="6" data-tag-name="Laktosefrei"
+                                                                 data-tag-display-name="Laktosefrei"
+                                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Laktosefrei
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/Wenig-Zucker/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="4"
+                                                                 data-index="7" data-tag-name="Wenig-Zucker"
+                                                                 data-tag-display-name="Wenig Zucker"
+                                                                 data-root-tag-identifier="Ernaehrungsform">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Wenig Zucker
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                                <div class="row half-gutter">
+
+                                                    <div class="col-xs-12 margin-top-1">
+                                                        <span class="category-headline">Aufwand</span>
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/leicht/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="5"
+                                                                 data-index="0" data-tag-name="leicht"
+                                                                 data-tag-display-name="Geringer Aufwand"
+                                                                 data-root-tag-identifier="aufwand">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Geringer Aufwand
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/mittel/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="5"
+                                                                 data-index="1" data-tag-name="mittel"
+                                                                 data-tag-display-name="Mittlerer Aufwand"
+                                                                 data-root-tag-identifier="aufwand">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Mittlerer Aufwand
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                    <div class="col-category col-xxs-12 col-xs-6">
+
+
+                                                        <a href="https://www.rewe.de/rezepte/schwer/"
+                                                           class="dropdown-link">
+                                                            <div class="category-item  " data-root-index="5"
+                                                                 data-index="2" data-tag-name="schwer"
+                                                                 data-tag-display-name="Hoher Aufwand"
+                                                                 data-root-tag-identifier="aufwand">
+
+        <span class="active-indicator">
+            <svg>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-tick"></use>
+            </svg>
+        </span>
+
+                                                                Hoher Aufwand
+
+                                                            </div>
+                                                        </a>
+
+
+                                                    </div>
+
+
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="footer">
+                                                <a href="#" class="" data-clear-filter="">Filter zurücksetzen</a>
+                                                <a href="#" class="btn btn-primary btn-block" data-element="close">
+                                                    <span class="recipe-count-label"></span>
+                                                    Ergebnisse anzeigen</a>
+                                            </div>
+
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="recipe-filter-info-container container margin-top-1 margin-bottom-half">
+
+                    <div class="result-info">
+
+
+                        <div class="recipe-tags clearfix row no-gutter is-empty ">
+
+                            <span class="active-filter-label">Aktive Filter</span>
+
+                            <ul class="tags-list col-xs-12 col-md-10 list-unstyled pull-left">
+
+
+                                <li class="reset-filter-item pull-left" data-clear-filter="">Filter zurücksetzen</li>
+                            </ul>
+
+                        </div>
+
+                        <div class="recipe-count">
+                            <strong class="recipe-count-label">{{ len .Data.Pages }}</strong> Rezepte
+                            <span class="search-string-info-label hidden">zu <strong class="search-string-info-value"></strong></span>
+                        </div>
+
+                        <div class="recipe-new-count font-style-body controller"
+                             data-controller="master/fragments/NewCountDescription"
+                             data-hbs-template="/rewe-facelift2013/handlebars/rdk/recipe-new-count-description"
+                             data-timestamp="">
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="recipe-search-results container margin-bottom-1  ">
+
+                <div class="result-items list-unstyled">
+
+                    <div id="previous-button-container" class="text-center">
+
+
+                        <a href="#" class="load-more-recipes btn btn-primary hidden" data-previous="">
+                            <span class="label">Vorherige Rezepte anzeigen</span>
+                        </a>
+
+                    </div>
+
+                    <div class="row half-gutter" data-more-content="">
+
+                        {{ range .Data.Pages }}
+
+                        <div class="favorite-recipe-card col-xxs-12 col-xs-6 col-sm-4 col-md-3 controller" data-controller="master/modules/RecipeCard" data-recipe-title="Maultaschen-Gratin" data-recipe-amount="4" data-uuid="b9742b85-55b3-4daa-9e7a-ab348163c2c8">
+                            <div class="rdk-teaser rdk-recipe-teaser">
+                                <a href="{{ .Permalink }}" class="rdk-card hover-box-shadow" data-page-number="1">
+
+                                    <div class="teaser-picture">
+                                        <svg class="logo">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-logo"></use>
+                                        </svg>
+                                        <picture class="picture cover hidden-print">
+                                            <source media="(min-width: 768px)" data-srcset="{{ $baseUrl }}/{{ .Params.image }}" srcset="{{ $baseUrl }}/{{ .Params.image }}">
+                                            <img src="{{ $baseUrl }}/{{ .Params.image }}" data-srcset="{{ $baseUrl }}/{{ .Params.image }}" srcset="{{ $baseUrl }}/{{ .Params.image }}">
+                                        </picture>
+                                    </div>
+
+                                    <div class="recipe-info">
+                                        <p class="recipe-title font-style-body ">{{ .Title }}</p>
+                                        <div class="recipe-meta">
+                                            <div class="meta-time">
+                                                <svg>
+                                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-clock"></use>
+                                                </svg>
+                                                <span class="font-style-caption">40 min</span>
+                                            </div>
+                                            <div class="meta-level font-style-caption">
+                                                <span class="spoon active">
+                                                    <svg>
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-spoon-rdkv2"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="spoon active">
+                                                    <svg>
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-spoon-rdkv2"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="spoon">
+                                                    <svg>
+                                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-spoon-rdkv2"></use>
+                                                    </svg>
+                                                </span>
+                                                <span class="font-style-caption">Mittel</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <!--<div class="rdk-teaser-label font-style-tag">-->
+                                    <!--<span>Rezept des Tages</span>-->
+                                <!--</div>-->
+
+                                <div class="rdk-recipe-favor">
+                                    <div class="favor-label-wrapper" data-favor="">
+                                        <svg class="favor-ribbon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-ribbon"></use>
+                                        </svg>
+                                        <svg class="favor-state favored">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-favored"></use>
+                                        </svg>
+                                        <svg class="favor-state unfavored ">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-rdk-unfavored"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="arrow-box position-right ">
+                                        In <a href="https://www.rewe.de/meine-rezepte/" data-favorites-link="">Meine Rezepte</a> gespeichert
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider col-xs-12">
+                            <hr class="dashed ">
+                        </div>
+                        {{ end }}
+                    </div>
+
+                    <div id="more-button-container" class="text-center">
+
+
+                        <a href="https://www.rewe.de/rezepte?pageNumber=2"
+                           class="load-more-recipes margin-vertical-1 btn btn-primary" data-more="">
+                            <span class="label">Mehr Rezepte anzeigen</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="no-results margin-bottom-1 margin-bottom-4">
+                    <p><strong>Keine Ergebnisse</strong></p>
+
+                    <p>Leider konnte kein passendes Rezept gefunden werden. Bitte versuchen Sie es mit einem anderen
+                        Suchbegriff erneut oder erweitern Sie Ihre Kategorieauswahl.</p>
+                </div>
+
+
+                <div class="reloading-container">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="container margin-vertical-2 index-section">
+        <div class="row">
+
+            <h2 class="h2 section-headline text-center margin-vertical-0" id="weitere-interessante-inhalte">Weitere
+                interessante Inhalte</h2>
+            <hr class="margin-vertical-1">
+
+
+            <div class="index-group col-xs-12 col-sm-6 col-lg-3">
+                <h3 class="h3 margin-vertical-0 group-headline" id="rezeptsammlungen">
+                    Rezeptsammlungen
+                </h3>
+                <ul class="list-unstyled font-style-body controller more-item-group show-only-mobile margin-bottom-2 margin-sm-bottom-1"
+                    data-controller="master/fragments/MoreItemGroup" data-count="3">
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="/ernaehrung/low-carb/low-carb-rezepte/" target="_self" class="font-style-body "
+                           title="">
+                            Low Carb Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="/ernaehrung/smoothies/smoothie-rezepte/" target="_self" class="font-style-body "
+                           title="">
+                            Smoothie Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="/thermomix/" target="_self" class="font-style-body " title="">
+                            Thermomix Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/vegan/vegane-gerichte/" target="_self" class="font-style-body " title="">
+                            Vegane Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/schnelle-rezepte-in-zehn-minuten/" target="_self" class="font-style-body "
+                           title="">
+                            Schnelle Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/gesunde-rezepte-unter-zwanzig-minuten/" target="_self"
+                           class="font-style-body " title="">
+                            Gesunde Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/diaeten/kalorienarme-rezepte/" target="_self" class="font-style-body "
+                           title="">
+                            Kalorienarme Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/apfelstrudel/" target="_self" class="font-style-body " title="">
+                            Apfelstrudel
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/kaiserschmarrn/" target="_self" class="font-style-body " title="">
+                            Kaiserschmarrn
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/inspiration-der-woche/burger/burger-rezepte/" target="_self"
+                           class="font-style-body " title="">
+                            Burger Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/inspiration-der-woche/adventsbaeckerei/" target="_self"
+                           class="font-style-body " title="">
+                            Plätzchen Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/muffins/" target="_self" class="font-style-body " title="">
+                            Muffins
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/zucchini/" target="_self" class="font-style-body " title="">
+                            Zucchini
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/gulasch/" target="_self" class="font-style-body " title="">
+                            Gulasch
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/kuchen/" target="_self" class="font-style-body " title="">
+                            Kuchen
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/flammkuchen/" target="_self" class="font-style-body " title="">
+                            Flammkuchen
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="more-button">
+                        <span class="visible-open font-style-body">Weniger anzeigen</span>
+                        <span class="visible-closed font-style-body">Mehr anzeigen</span>
+                        <svg>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                        </svg>
+                    </li>
+
+
+                </ul>
+            </div>
+
+
+            <div class="index-group col-xs-12 col-sm-6 col-lg-3">
+                <h3 class="h3 margin-vertical-0 group-headline" id="beliebte-rezepte">
+                    Beliebte Rezepte
+                </h3>
+                <ul class="list-unstyled font-style-body controller more-item-group show-only-mobile margin-bottom-2 margin-sm-bottom-1"
+                    data-controller="master/fragments/MoreItemGroup" data-count="3">
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="https://www.rewe.de/rezepte/pfannkuchen/" target="_self" class="font-style-body "
+                           title="">
+                            Pfannkuchen Rezepte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="https://www.rewe.de/rezepte/schnelles-chili-con-carne/" target="_self"
+                           class="font-style-body " title="">
+                            Chili con Carne Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="https://www.rewe.de/rezepte/klassisches-tiramisu-90er/" target="_self"
+                           class="font-style-body " title="">
+                            Tiramisu Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/klassische-lasagne/" target="_self"
+                           class="font-style-body " title="">
+                            Lasagne Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/halloween-spider-muffins/" target="_self"
+                           class="font-style-body " title="">
+                            Muffin Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/kaesespaetzle-schinken/" target="_self"
+                           class="font-style-body " title="">
+                            Käsespätzle Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/vanillekipferl/" target="_self" class="font-style-body "
+                           title="">
+                            Vanillekipferl Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/guacamole/" target="_self" class="font-style-body "
+                           title="">
+                            Guacamole Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/szegediner-gulasch/" target="_self"
+                           class="font-style-body " title="">
+                            Szegediner Gulasch Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/inspiration-der-woche/spargel/spargel-kochen/" target="_self"
+                           class="font-style-body " title="">
+                            Spargel kochen
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/klassischer-flammkuchen/" target="_self"
+                           class="font-style-body " title="">
+                            Flammkuchen Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/griechisches-moussaka-auberginen-auflauf/" target="_self"
+                           class="font-style-body " title="">
+                            Moussaka
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/kaese-lauch-suppe/" target="_self" class="font-style-body "
+                           title="">
+                            Käse Lauch Suppe
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/nudeln/nudelsalat/" target="_self" class="font-style-body " title="">
+                            Nudelsalat Rezept
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://www.rewe.de/rezepte/nudelauflauf-mit-spinat-und-schinken/" target="_self"
+                           class="font-style-body " title="">
+                            Nudelauflauf
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/kartoffelgratin/" target="_self" class="font-style-body " title="">
+                            Kartoffelgratin
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="more-button">
+                        <span class="visible-open font-style-body">Weniger anzeigen</span>
+                        <span class="visible-closed font-style-body">Mehr anzeigen</span>
+                        <svg>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                        </svg>
+                    </li>
+
+
+                </ul>
+            </div>
+
+
+            <div class="index-group col-xs-12 col-sm-6 col-lg-3">
+                <h3 class="h3 margin-vertical-0 group-headline" id="food-trends">
+                    Food Trends
+                </h3>
+                <ul class="list-unstyled font-style-body controller more-item-group show-only-mobile margin-bottom-2 margin-sm-bottom-1"
+                    data-controller="master/fragments/MoreItemGroup" data-count="3">
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="/ernaehrung/superfood/chia-samen/" target="_self" class="font-style-body " title="">
+                            Chia Samen
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="/ernaehrung/inspiration-der-woche/avocado/avocado-faq/" target="_self"
+                           class="font-style-body " title="">
+                            Avocado
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="/ernaehrung/superfood/quinoa/" target="_self" class="font-style-body " title="">
+                            Quinoa
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://shop.rewe.de/c/nahrungsmittel-kochhilfen-gewuerze-gewuerze-kurkuma/"
+                           target="_blank" class="font-style-body " title="">
+                            Kurkuma
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://shop.rewe.de/c/obst-gemuese-gemuese-zucchini-aubergine-kuerbis/"
+                           target="_blank" class="font-style-body " title="">
+                            Aubergine
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://shop.rewe.de/c/nahrungsmittel-fertiggerichte-konserven-gemuesekonserven-spargel/"
+                           target="_blank" class="font-style-body " title="">
+                            Spargel
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://shop.rewe.de/c/nahrungsmittel-kochhilfen-gewuerze-fixprodukte-auflaeufe/"
+                           target="_blank" class="font-style-body " title="">
+                            Aufläufe
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/sachertorte/" target="_self" class="font-style-body " title="">
+                            Sachertorte
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/wiener-schnitzel/" target="_self" class="font-style-body " title="">
+                            Wiener Schnitzel
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://shop.rewe.de/PD6976654" target="_blank" class="font-style-body " title="">
+                            Merci Schokolade
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="https://shop.rewe.de/PD79099" target="_blank" class="font-style-body " title="">
+                            Nescafé Dolce Gusto Cappuccino
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/matcha-tee/" target="_self" class="font-style-body " title="">
+                            Matcha Tee
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/suesskartoffeln/" target="_self" class="font-style-body " title="">
+                            Süßkartoffeln
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/lasagne/" target="_self" class="font-style-body " title="">
+                            Lasagne
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/kaesekuchen/" target="_self" class="font-style-body " title="">
+                            Käsekuchen
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/kartoffelsalat/" target="_self" class="font-style-body " title="">
+                            Kartoffelsalat
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="more-button">
+                        <span class="visible-open font-style-body">Weniger anzeigen</span>
+                        <span class="visible-closed font-style-body">Mehr anzeigen</span>
+                        <svg>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                        </svg>
+                    </li>
+
+
+                </ul>
+            </div>
+
+
+            <div class="index-group col-xs-12 col-sm-6 col-lg-3">
+                <h3 class="h3 margin-vertical-0 group-headline" id="wissenswertes">
+                    Wissenswertes
+                </h3>
+                <ul class="list-unstyled font-style-body controller more-item-group show-only-mobile margin-bottom-2 margin-sm-bottom-1"
+                    data-controller="master/fragments/MoreItemGroup" data-count="3">
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="/rezepte/was-koche-ich-heute/" target="_self" class="font-style-body " title="">
+                            Was koche ich heute?
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="/ernaehrung/low-carb/" target="_self" class="font-style-body " title="">
+                            Low Carb
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item">
+
+
+                        <a href="/ernaehrung/nudeln/nudelsalat/" target="_self" class="font-style-body " title="">
+                            Nudelsalat
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/nudeln/" target="_self" class="font-style-body " title="">
+                            Nudeln
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/smoothie/" target="_self" class="font-style-body " title="">
+                            Smoothie
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/diaeten/weight-watchers/" target="_self" class="font-style-body " title="">
+                            Weight Watchers
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/inspiration-der-woche/chili-con-carne/" target="_self"
+                           class="font-style-body " title="">
+                            Chili con Carne
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/inspiration-der-woche/halloween/perfekte-kuerbissuppe/" target="_self"
+                           class="font-style-body " title="">
+                            Kürbissuppe
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/detox/" target="_self" class="font-style-body " title="">
+                            Detox
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/paleo-diaet/" target="_self" class="font-style-body " title="">
+                            Paleo Diät
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/clean-eating/" target="_self" class="font-style-body " title="">
+                            Clean Eating
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/pfannkuchen/" target="_self" class="font-style-body " title="">
+                            Pfannkuchen
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/sushi/" target="_self" class="font-style-body " title="">
+                            Sushi
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/halal/" target="_self" class="font-style-body " title="">
+                            Halal Ernährung
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/tiramisu/" target="_self" class="font-style-body " title="">
+                            Tiramisu
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="margin-vertical- more-item" style="display: none;">
+
+
+                        <a href="/ernaehrung/koscher/" target="_self" class="font-style-body " title="">
+                            Kosher Ernährung
+                        </a>
+
+
+                    </li>
+
+
+                    <li class="more-button">
+                        <span class="visible-open font-style-body">Weniger anzeigen</span>
+                        <span class="visible-closed font-style-body">Mehr anzeigen</span>
+                        <svg>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#inline-icon-carrot"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
 {{ partial "footer" . }}
