@@ -1,6 +1,6 @@
 ---
 name: afrikanischer-hackfleischtopf-banane
-title: Afrikanischer Hackfleischtopf mit Äpfeln
+title: Afrikanischer Hackfleischtopf
 image: /img/afrikanischer-hackfleischtopf-banane.jpg
 description: Afrikanischer Hackfleischtopf mit Banane
 difficulty: '2'
