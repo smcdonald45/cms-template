@@ -9,7 +9,7 @@
 <div class="rdkv2">
     <div class="rdk-header recipe-detail-header has-gradient">
 
-        <div id="edit-recipe-btn" style="position: absolute; z-index: 500; top:10px; left: 10px; display: inline;">
+        <div id="edit-recipe-btn" style="position: absolute; z-index: 500; top:10px; left: 10px; display: none;">
             <a href="https://clever-hoover-538d35.netlify.com/admin/#/collections/recipe/entries/{{ .Params.name }}" target="_blank">
                 <img src="{{ $baseUrl }}/img/icons/edit.png"/>
             </a>
@@ -470,7 +470,7 @@
             function(e) {
                 $('#edit-recipe-btn').fadeIn('fast');
             },function() {
-                $('#edit-recipe-btn').fadeOut('fast');
+                //$('#edit-recipe-btn').fadeOut('fast');
             }
         );
     </script>
