@@ -19,6 +19,7 @@ steps:
       Flüssigkeit in der Pfanne aufgesogen ist und der Reis noch nicht gar, noch
       etwas Brühe oder Wasser nachgießen). Kurz bevor der Reis gar ist, die
       Erbsen dazugeben, erneut mit Salz und Pfeffer abschmecken.
+  - description: Viel Spaß!!
 ingredients:
   - ingredient: Hähnchenstücke
     quantity: '1.0'
